@@ -2,7 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-import {Search,Heart,UserRound,ShoppingBag,Menu,X,ArrowUpRight,ArrowRight,Minus,Plus} from 'lucide-react';
+import {Search,Heart,UserRound,ShoppingBag,Menu,X,ArrowUpRight,Minus,Plus} from 'lucide-react';
 import {AnimatePresence,motion,useReducedMotion} from 'motion/react';
 import {useStore} from './store';
 import {Asset} from './editorial';
@@ -32,7 +32,46 @@ export function Header(){
  </header>;
 }
 
-export function Newsletter(){const [email,setEmail]=useState(''),[status,setStatus]=useState(''),[busy,setBusy]=useState(false);async function submit(e:React.FormEvent){e.preventDefault();setStatus('');if(!commerceConfig.newsletterUrl){setStatus('The mailing list is not open yet. Please contact Kritarra for collection updates. Your email has not been submitted.');return;}setBusy(true);try{const response=await fetch(commerceConfig.newsletterUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent:true})});if(!response.ok)throw Error();setStatus('Thank you. Your subscription request has been received.');setEmail('');}catch{setStatus('Your request could not be submitted. Please try again or contact Kritarra.');}finally{setBusy(false);}}return <section className="newsletter" id="newsletter"><div><span className="eyebrow">THE KRITARRA LETTER</span><h2>An invitation<br/>to <em>discover.</em></h2><p>New creations, collections and stories.<br/>A little closer to the world of Kritarra.</p></div><form onSubmit={submit}><label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label><div className="email-field"><input id="newsletter-email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Enter your email" required autoComplete="email" maxLength={254}/><button disabled={busy} aria-label="Subscribe to the Kritarra letter"><ArrowRight size={22}/></button></div><p className="privacy-copy">By subscribing, you agree to receive emails from Kritarra.<br/>Read our <Link href="/policies/privacy/">privacy information</Link>. You may unsubscribe at any time.</p><p className="form-status" role="status">{status}</p></form></section>;}
+export function Newsletter() {
+ const [email,setEmail]=useState(''),[status,setStatus]=useState(''),[busy,setBusy]=useState(false);
+ async function submit(event:React.FormEvent) {
+  event.preventDefault();
+  setStatus('');
+  if(!commerceConfig.newsletterUrl) {
+   setStatus('The mailing list is not open yet. Please contact Kritarra for collection updates. Your email has not been submitted.');
+   return;
+  }
+  setBusy(true);
+  try {
+   const response=await fetch(commerceConfig.newsletterUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent:true})});
+   if(!response.ok)throw Error();
+   setStatus('Thank you. Your subscription request has been received.');
+   setEmail('');
+  } catch {
+   setStatus('Your request could not be submitted. Please try again or contact Kritarra.');
+  } finally {
+   setBusy(false);
+  }
+ }
+ return (
+  <section className="newsletter newsletter-invitation" id="newsletter" aria-labelledby="newsletter-heading">
+   <div className="newsletter-intro">
+    <span className="eyebrow">THE KRITARRA LETTER</span>
+    <h2 id="newsletter-heading"><span>An invitation</span> <span>to <em>discover.</em></span></h2>
+    <p>New creations, collections and stories from the world of Kritarra.</p>
+   </div>
+   <form onSubmit={submit} aria-busy={busy}>
+    <label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label>
+    <div className="email-field">
+     <input id="newsletter-email" type="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Your email, please" required autoComplete="email" maxLength={254} aria-describedby="newsletter-privacy newsletter-status" />
+     <button type="submit" disabled={busy} aria-label="Subscribe to the Kritarra letter">{busy?'SENDING…':'JOIN THE LETTER'}</button>
+    </div>
+    <p className="privacy-copy" id="newsletter-privacy">By subscribing, you agree to receive emails from Kritarra. Read our <Link href="/policies/privacy/">privacy information</Link>. You may unsubscribe at any time.</p>
+    <p className="form-status" id="newsletter-status" role="status">{status}</p>
+   </form>
+  </section>
+ );
+}
 export function Footer(){return <footer className="site-footer"><div className="footer-top"><div className="footer-brand"><Link href="/" className="footer-wordmark">KRITARRA</Link><p>A personal expression.<br/>An enduring perspective.</p><a href={instagram} target="_blank" rel="noreferrer" className="footer-instagram">INSTAGRAM <ArrowUpRight size={12}/></a></div><div><h3>EXPLORE</h3><Link href="/collections/">All creations</Link>{categories.map(c=><Link key={c} href={`/collections/${c.toLowerCase()}/`}>{c}</Link>)}</div><div><h3>THE MAISON</h3><Link href="/about/">About Kritarra</Link><Link href="/#our-craft">Our perspective</Link><Link href="/#journal">The journal</Link><Link href="/contact/">Private appointments</Link></div><div><h3>HERE TO ASSIST</h3><Link href="/contact/">Contact us</Link><Link href="/policies/care/">Jewellery care</Link><Link href="/policies/shipping/">Shipping & returns</Link><a href={`mailto:${contactEmail}`}>{contactEmail}</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} KRITARRA. ALL RIGHTS RESERVED.</span><span className="preview-label">DESIGN PREVIEW · CATALOGUE FORTHCOMING</span><div><Link href="/policies/privacy/">PRIVACY</Link><Link href="/policies/terms/">TERMS</Link><span>INDIA · INR ₹</span></div></div></footer>;}
 
 export function Overlays(){const {panel,setPanel,wishlist,bag,updateQuantity}=useStore();const [query,setQuery]=useState('');const path=usePathname();const ref=useRef<HTMLDivElement>(null);const reduce=useReducedMotion();useEffect(()=>{setPanel(null);},[path,setPanel]); // setPanel is the stable state setter

@@ -79,3 +79,8 @@ The “Designed to be remembered” statement uses locally hosted Full HD emeral
 ## Considered selection
 
 “Yours to discover” uses a photographic mosaic: a large ring portrait, two smaller category views and a wide bracelet detail. Tablet shows a balanced two-column edit; mobile switches to a scrollable gallery with snap alignment and visible overflow cues. Existing catalogue product links and wishlist controls are reused. A single concise note identifies the images as category previews and keeps prices on request; no individual SKUs or prices are invented.
+
+
+## The Kritarra letter
+
+The invitation closes the page with a centred serif headline, one short introductory line and an underlined email field with a text-labelled submit button. The headline stacks on mobile; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
