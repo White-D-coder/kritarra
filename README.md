@@ -63,7 +63,7 @@ The perspective section is a compact editorial collage without an added backgrou
 
 ## Collection discovery
 
-The desktop discovery index previews the corresponding original campaign image when a category is hovered or focused. Every category and the featured photograph link directly to their collection. Mobile shows a two-column photographic index. New user-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images also replace their catalogue preview placeholders. Original sources and hashes are recorded in assets/campaign/sources.json; prices and specifications remain unconfirmed.
+Discovery displays all four collection photographs together in a full-width strip, with category titles over the images. Each image links directly to its collection. Mobile uses a compact two-by-two gallery. Subtle image and underline hover transitions also respond to keyboard focus and respect reduced motion. User-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images remain in use, with provenance in assets/campaign/sources.json.
 
 
 ## Visual journal
