@@ -82,3 +82,16 @@
 .hero-keyboard-action:focus-visible{position:relative;width:auto;height:auto;margin:0;padding:12px 18px;overflow:visible;clip:auto;white-space:nowrap;background:var(--ivory);color:var(--ink);font-size:11px}
 @media(max-width:600px){.main-nav{height:68px;padding:0 18px}.nav-menu,.nav-right{font-size:8px;letter-spacing:1px}.menu-services{font-size:11px;gap:0 22px}}
 @media(prefers-reduced-motion:reduce){.hero-keyboard-playback{display:none}}
+
+/* Reference navigation: two icons, a centred wordmark, three icons. */
+html{scroll-padding-top:70px}
+.site-header.reference-nav .main-nav{height:60px;padding:0 3.5vw;border-bottom:0}
+.site-header.reference-nav.scrolled{box-shadow:none}
+.site-header.reference-nav .wordmark{font-size:32px;line-height:1;letter-spacing:4.5px;padding-left:4.5px}
+.site-header.reference-nav .nav-left,.site-header.reference-nav .nav-tools{display:flex;align-items:center;gap:20px}
+.site-header.reference-nav .nav-left button,.site-header.reference-nav .nav-tools button{display:flex;align-items:center;justify-content:center;min-width:24px;width:24px;min-height:44px;padding:0}
+.hero-campaign::after{height:150px;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.55) 40%,transparent 100%)}
+@media(max-width:600px){html{scroll-padding-top:64px}.site-header.reference-nav .main-nav{height:54px;padding:0 16px}.site-header.reference-nav .wordmark{font-size:24px;letter-spacing:2.8px;padding-left:2.8px}.site-header.reference-nav .nav-left,.site-header.reference-nav .nav-tools{gap:12px}.site-header.reference-nav .nav-left button,.site-header.reference-nav .nav-tools button{width:20px;min-width:20px}.site-header.reference-nav svg{width:18px;height:18px}}
+
+/* Keep the signature pendant entirely in its original portrait proportions. */
+.signature-major .asset{height:auto;aspect-ratio:4/5}

@@ -2,26 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useReducedMotion } from 'motion/react';
+import { campaign } from '@/lib/imagery';
 
 const photographs = [
-  {
-    id: 'DdgV82YseoM', width: 1403, height: 1753,
-    widths: [640, 1280, 1403],
-    alt: 'A circular green-stone earring worn with a sheer green scarf',
-    desktop: '50% 30%', mobile: '46% 45%',
-  },
-  {
-    id: 'De1ch5_P4xb', width: 1136, height: 1408,
-    widths: [640, 1136],
-    alt: 'Three necklaces with green heart-shaped stones, framed by torn ivory paper',
-    desktop: '50% 74%', mobile: '50% 60%',
-  },
-  {
-    id: 'DdDpJ8EMryv', width: 3298, height: 4096,
-    widths: [640, 1280, 1920],
-    alt: 'Kritarra campaign portrait with a green-stone necklace and sculptural earrings',
-    desktop: '50% 90%', mobile: '60% 60%',
-  },
+  { ...campaign.Dcn9jVgs_Iv, desktop: '50% 8%', mobile: '50% 40%' },
+  { ...campaign.DdgV82YseoM, desktop: '50% 30%', mobile: '46% 45%' },
+  { ...campaign.DdDpJ8EMryv, desktop: '50% 90%', mobile: '60% 60%' },
 ];
 
 export function Hero() {
@@ -74,8 +60,8 @@ export function Hero() {
             style={{ '--focal-desktop': photo.desktop, '--focal-mobile': photo.mobile } as React.CSSProperties}
           >
             <img
-              src={`/images/hero/${photo.id}-${photo.widths.at(-1)}.webp`}
-              srcSet={photo.widths.map(width => `/images/hero/${photo.id}-${width}.webp ${width}w`).join(', ')}
+              src={photo.src}
+              srcSet={photo.variants.filter(variant => variant.width >= 960).map(variant => `${variant.src} ${variant.width}w`).join(', ')}
               sizes="100vw"
               width={photo.width}
               height={photo.height}

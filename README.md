@@ -15,10 +15,10 @@ npm run build
 
 ## Brand data and launch requirements
 
-This is a working design preview, **not a trading-ready shop**. The hero now uses authentic photographs from the three Instagram posts supplied by the user. Full-resolution files were retrieved from the public post embeds, with locally served responsive WebP derivatives. Other campaign photography, screenshot references, the official product catalogue, prices, policies and commerce credentials remain outstanding. No stock or generated jewellery, invented products, prices, testimonials or heritage claims are used.
+This is a working design preview, **not a trading-ready shop**. The hero and editorial sections now use authentic photographs from the user-selected Instagram posts. Original files were retrieved from public post embeds and converted to locally served responsive WebP derivatives. Approved ring/bracelet imagery, screenshot references, the official product catalogue, prices, policies and commerce credentials remain outstanding. No stock or generated jewellery, invented products, prices, testimonials or heritage claims are used.
 
-- Hero imagery is configured in `src/components/hero.tsx`; originals and attribution are retained in `assets/hero/`. The three images crossfade every eight seconds, pause on hover or keyboard focus, provide keyboard-accessible photo selection and pause controls without visible bottom icons, stop while the tab is hidden, and remain static under reduced-motion preferences.
-- Replace the remaining clearly labelled imagery placeholders with approved local assets in `public/images`. `Asset` accepts `src`; wire homepage campaign assets in `src/app/page.tsx` and product photos in `src/lib/catalog.ts`. The asset boxes preserve their ratios to avoid layout shifts.
+- Hero imagery is configured in `src/components/hero.tsx`; originals and attribution are retained in `assets/hero/` and `assets/campaign/`. The opening photograph is Dcn9jVgs_Iv. The rejected De1ch5_P4xb image is excluded and its public derivatives have been removed. Hero sources omit 640px variants. The three images crossfade every eight seconds, pause on hover or keyboard focus, provide keyboard-accessible photo selection and pause controls without visible bottom icons, stop while the tab is hidden, and remain static under reduced-motion preferences.
+- Replace the remaining clearly labelled imagery placeholders with approved local assets in `public/images`. `Asset` accepts `src` or a responsive `photo` from `src/lib/imagery.ts`; wire homepage campaign assets in `src/app/page.tsx` and product photos in `src/lib/catalog.ts`. The asset boxes preserve their ratios to avoid layout shifts.
 - Replace the four category reference entries in `src/lib/catalog.ts` with approved real products: unique IDs/slugs, names, descriptions, INR prices, multiple photographs, variants, specifications, and numeric Shopify variant IDs. Set `preview: false` only for approved products.
 - Configure `NEXT_PUBLIC_SHOPIFY_STORE_ORIGIN` to the approved `https://…myshopify.com` origin. The bag produces a Shopify cart permalink only when **every** selected item has a real price, approved product status and real numeric variant ID. Shopify handles taxes, inventory, shipping, secure payment and order confirmation. No payment credentials or fake confirmation exist here.
 - Configure `NEXT_PUBLIC_CUSTOMER_ACCOUNT_URL` for the approved hosted customer account service. No authentication is simulated.
@@ -31,7 +31,7 @@ Wishlist and bag persist locally on the current browser, with validation of stor
 
 ## Homepage opening
 
-The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar contains Menu, the wordmark and Collections, with no announcement bar or icons. Search, wishlist, bag and account remain available as text actions inside Menu.
+The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar follows the supplied reference: menu and search on the left, the wordmark centred, and account, wishlist and bag on the right. There is no announcement bar, logo tagline, lower divider, or visible bottom hero control. The same services also remain available inside Menu.
 
 ## Art direction
 
@@ -39,8 +39,8 @@ Warm ivory `#F8F6F1`, champagne `#EAE0D4`, charcoal `#24211F`, taupe `#82766C`, 
 
 ## Sources
 
-- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero uses user-selected posts DdgV82YseoM, De1ch5_P4xb and DdDpJ8EMryv. See `assets/hero/sources.json` for original links, dimensions and file hashes.
+- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero opens with Dcn9jVgs_Iv, followed by DdgV82YseoM and DdDpJ8EMryv. The 12 newly supplied photographs are used across the hero, signature edit, perspective, categories, journal and social gallery. See `assets/hero/sources.json` and `assets/campaign/sources.json` for original links, dimensions and file hashes.
 - https://in.linkedin.com/company/kritarra — brand profile linking the same Instagram and listing info@kritarra.in.
 - Visual direction references (no copied assets): https://www.bulgari.com/en-in/, https://hazoorilaljewellers.com/, https://renuoberoi.com/.
 
-Hero image use follows the user’s explicit instruction to use those three official posts; permission for any other campaign assets remains outstanding. The two referenced screenshots were absent from the attachment.
+Hero and editorial image use follows the user’s explicit instruction to use the supplied official posts. Category previews remain distinct from individual purchasable products; images do not imply verified availability or specifications. The two referenced screenshots were absent from the attachment.
