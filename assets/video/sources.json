@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Elegant Woman in Green Dress with Emerald Ring",
+    "creator": "Ángel Fernández",
+    "source": "https://www.pexels.com/video/elegant-woman-in-green-dress-with-emerald-ring-32715074/",
+    "license": "https://www.pexels.com/license/",
+    "original": "assets/video/emerald-ring-original.mp4",
+    "sha256": "904f0e43864c86c7d3973a8db31cd3b61f509295031210f855d6c7be05098b1c",
+    "width": 1920,
+    "height": 1080,
+    "duration": 5.916667,
+    "outputs": [
+      "/videos/emerald-ring.mp4",
+      "/videos/emerald-ring-poster.webp"
+    ],
+    "note": "Licensed editorial background footage; not a Kritarra catalogue item."
+  }
+]

@@ -127,23 +127,21 @@ html{scroll-padding-top:70px}
   .kritarra-editorial:not([data-editorial-motion=diagonal]) .kritarra-editorial-track{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* Perspective: a horizontal title, cinematic photograph and two quiet chapters. */
-.perspective{padding:65px var(--gutter) 85px;background:transparent}
-.perspective-heading{display:flex;justify-content:space-between;align-items:baseline;gap:35px;margin-bottom:38px}
-.perspective-heading .eyebrow{flex:none;font-size:8px;letter-spacing:1.6px;line-height:1.8;margin:0}
-.perspective-heading h2{font-size:clamp(58px,6.3vw,96px);line-height:1.02;letter-spacing:-1.9px}
-.perspective-heading h2 em{font-weight:400}
+/* Perspective: one message with a full portrait, without an added background. */
+.perspective{display:grid;grid-template-columns:.9fr 1fr;align-items:center;gap:clamp(55px,9vw,140px);padding:70px var(--gutter) 90px;background:transparent}
+.perspective-heading{max-width:460px;justify-self:center}
+.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.5px;line-height:1.8;margin-bottom:29px}
+.perspective-heading h2{font-size:clamp(62px,5.5vw,84px);line-height:.98;letter-spacing:-1.8px}
+.perspective-heading h2 em{display:block;white-space:nowrap;font-weight:400}
+.perspective-heading p{max-width:310px;margin-top:27px;font-size:12px;line-height:1.9;color:var(--taupe)}
+.perspective-portrait{width:100%;max-width:550px;justify-self:end}
 .perspective-portrait figure{margin:0}
-.perspective-portrait .asset{width:100%;height:auto;aspect-ratio:16/9;background:transparent}
-.perspective-stories{display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,8vw,120px);max-width:1050px;margin:40px auto 0}
-.perspective-label{display:block;font-size:7px;line-height:1.8;letter-spacing:1.7px;color:var(--taupe);margin-bottom:12px}
-.perspective-story h3{font-size:clamp(29px,2.6vw,38px);line-height:1.1;letter-spacing:-.5px}
-.perspective-story p{max-width:410px;margin-top:15px;font-size:12px;line-height:1.9;color:var(--taupe)}
-.perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;margin-top:12px;padding:7px 0;font-size:8px;letter-spacing:1.2px}
+.perspective-portrait .asset{width:100%;height:auto;aspect-ratio:1440/1802;background:transparent}
+.perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;margin-top:21px;padding:7px 0;font-size:8px;letter-spacing:1.2px}
 .perspective-link::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .perspective-link:hover::after,.perspective-link:focus-visible::after{transform:scaleX(1)}
-@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:45px;padding-bottom:65px}.perspective-heading{display:block;margin-bottom:30px}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:18px}.perspective-heading h2{font-size:68px;letter-spacing:-1.6px}.perspective-portrait .asset{aspect-ratio:3/2}.perspective-stories{gap:40px;margin-top:32px}.perspective-story h3{font-size:31px}.perspective-story p{font-size:11px;line-height:1.85}.perspective-link{font-size:8px;letter-spacing:1px}}
-@media(max-width:767px){.perspective{padding:40px var(--gutter) 60px}.perspective-heading{display:block;margin-bottom:28px}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:22px}.perspective-heading h2{font-size:clamp(50px,14vw,78px);letter-spacing:-1.2px;line-height:1.01}.perspective-heading h2 em{display:block}.perspective-portrait .asset{aspect-ratio:1440/1802}.perspective-stories{grid-template-columns:1fr;gap:28px;margin-top:31px}.perspective-label{font-size:8px;margin-bottom:12px}.perspective-story h3{font-size:31px}.perspective-story p{font-size:12px;line-height:1.85}.perspective-link{font-size:8px}}
+@media(min-width:768px) and (max-width:1099px){.perspective{gap:45px;padding-top:45px;padding-bottom:65px}.perspective-heading h2{font-size:clamp(48px,5.9vw,65px);letter-spacing:-1.4px}.perspective-heading .eyebrow{font-size:7px;letter-spacing:1.2px;margin-bottom:23px}.perspective-heading p{font-size:11px;margin-top:22px}.perspective-link{font-size:7px;letter-spacing:1px;margin-top:16px}}
+@media(max-width:767px){.perspective{grid-template-columns:1fr;gap:31px;padding:40px var(--gutter) 60px}.perspective-heading{justify-self:start;max-width:none}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:24px}.perspective-heading h2{font-size:clamp(52px,14vw,76px);letter-spacing:-1.3px}.perspective-heading p{font-size:12px;line-height:1.85;margin-top:23px;max-width:310px}.perspective-link{margin-top:15px;font-size:8px}.perspective-portrait{justify-self:center;max-width:460px}}
 
 /* Discovery pairs an image preview with a quiet index of the four collections. */
 .discovery{padding:50px var(--gutter) 80px}
@@ -187,10 +185,28 @@ html{scroll-padding-top:70px}
 .journal-arches-copy .eyebrow{font-size:8px;letter-spacing:1.6px;line-height:1.8;margin-bottom:25px}
 .journal-arches-copy h2{font-size:clamp(56px,5.4vw,82px);line-height:1.01;letter-spacing:-1.7px}
 .journal-arches-copy h2 em{display:block;font-weight:400;color:#806b57}
-.journal-arches-copy p{font-size:12px;line-height:1.85;color:var(--taupe);margin-top:24px}
+.journal-arches-copy p{max-width:410px;font-size:12px;line-height:1.85;color:var(--taupe);margin-top:24px}
 .journal-collection-link{position:relative;display:inline-flex;align-items:center;min-height:44px;margin-top:25px;font-size:8px;letter-spacing:1.3px}
 .journal-collection-link::after{content:'';position:absolute;inset:auto 0 3px;height:1px;background:currentColor;transform:scaleX(.3);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .journal-collection-link:hover::after,.journal-collection-link:focus-visible::after{transform:scaleX(1)}
 @media(min-width:768px) and (max-width:1099px){.visual-journal{gap:45px;padding-top:75px;padding-bottom:80px}.journal-arches-copy h2{font-size:60px}.journal-arches-copy .eyebrow{font-size:7px;letter-spacing:1.2px;margin-bottom:20px}.journal-arches-copy p{font-size:11px;margin-top:20px}.journal-arch--front{outline-width:5px}}
 @media(max-width:767px){.visual-journal{grid-template-columns:1fr;gap:38px;padding:55px var(--gutter) 65px}.journal-arches{max-width:430px;aspect-ratio:1.02}.journal-arch{height:86%}.journal-arch--front{outline-width:5px}.journal-arches-copy{max-width:none}.journal-arches-copy .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:20px}.journal-arches-copy h2{font-size:clamp(52px,14vw,72px);line-height:1.02;letter-spacing:-1.2px}.journal-arches-copy h2 em{display:inline}.journal-arches-copy p{font-size:12px;margin-top:19px}.journal-collection-link{margin-top:19px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.journal-collection-link::after{transition:none}}
+
+/* A silent, locally hosted emerald film behind the remembered statement. */
+.perspective-heading p,.journal-arches-copy p,.philosophy-film p{text-wrap:balance}
+.philosophy.philosophy-film{position:relative;isolation:isolate;display:flex;align-items:center;height:75svh;min-height:650px;max-height:900px;padding:80px var(--gutter);overflow:hidden;background:#07372f;color:var(--ivory);text-align:left}
+.philosophy-media{position:absolute;inset:0;z-index:-2}
+.philosophy-media img,.philosophy-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.philosophy-media video{opacity:0;transition:opacity .8s ease}
+.philosophy-film[data-video-ready=true][data-motion=video] video{opacity:1}
+.philosophy-film::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,15,11,.68),rgba(0,15,11,.23) 65%,rgba(0,15,11,.15))}
+.philosophy-film-copy{max-width:560px}
+.philosophy-film .eyebrow{font-size:8px;letter-spacing:1.8px;margin-bottom:27px}
+.philosophy-film h2{font-size:clamp(62px,6.2vw,92px);line-height:1;letter-spacing:-1.5px}
+.philosophy-film h2 em{color:inherit}
+.philosophy-film p{max-width:330px;font-size:12px;line-height:1.85;margin-top:25px;color:#f8f6f1d6}
+.philosophy-film .philosophy-signature{color:var(--ivory);margin-top:29px;font-size:30px}
+.philosophy-motion-control{position:absolute;bottom:22px;right:var(--gutter);min-height:44px;padding:8px 0;font-size:9px;letter-spacing:.8px;color:var(--ivory);text-decoration:underline;text-underline-offset:5px}
+@media(max-width:767px){.philosophy.philosophy-film{height:80svh;min-height:650px;max-height:850px;align-items:flex-end;justify-content:center;text-align:center;padding:65px var(--gutter) 85px}.philosophy-media img,.philosophy-media video{object-position:44% 50%}.philosophy-film::after{background:linear-gradient(180deg,rgba(0,15,11,.12),rgba(0,15,11,.18) 28%,rgba(0,15,11,.76) 100%)}.philosophy-film h2{font-size:clamp(52px,13.5vw,74px);letter-spacing:-1.1px}.philosophy-film .eyebrow{font-size:8px;margin-bottom:23px}.philosophy-film p{font-size:12px;max-width:270px;margin:22px auto 0}.philosophy-film .philosophy-signature{margin-top:23px}.philosophy-motion-control{font-size:9px;bottom:15px}}
+@media(prefers-reduced-motion:reduce){.philosophy-media video{transition:none}}

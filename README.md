@@ -58,7 +58,7 @@ At the measured 1440×1000 desktop viewport, the current track moves from (0, 0)
 
 ## Kritarra perspective
 
-The perspective section has no added background. A horizontal heading introduces a wide monochrome campaign photograph, with two compact story columns underneath. Tablet uses a 3:2 photograph; mobile restores its complete portrait proportions and stacks the stories in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.
+The perspective section pairs one concise message at left with the complete monochrome portrait at right, without an added background. Mobile places the copy above the portrait. Its single link opens the Kritarra story with a restrained underline animation.
 
 
 ## Collection discovery
@@ -68,4 +68,9 @@ The desktop discovery index previews the corresponding original campaign image w
 
 ## Visual journal
 
-The Personal Issue follows the supplied reference with two overlapping capsule-shaped photographs beside a short title, a one-line note and a single collection link. The existing green-earring portrait and monochrome jewellery study remain in use. On mobile the photographs sit above the compact copy; the link keeps its keyboard focus and reduced-motion underline treatment.
+The Personal Issue follows the supplied reference with two overlapping capsule-shaped photographs beside a short title, a short two-line paragraph and a single collection link. The existing green-earring portrait and monochrome jewellery study remain in use. On mobile the photographs sit above the compact copy; the link keeps its keyboard focus and reduced-motion underline treatment.
+
+
+## Remembered film background
+
+The “Designed to be remembered” statement uses locally hosted Full HD emerald-ring footage by Ángel Fernández, sourced from https://www.pexels.com/video/elegant-woman-in-green-dress-with-emerald-ring-32715074/ under https://www.pexels.com/license/. Provenance and the original checksum are in assets/video/sources.json. This is editorial stock footage, not a Kritarra product listing. The silent inline loop loads only near its section, pauses outside the viewport and in hidden tabs, and offers a text pause control. Reduced-motion and data-saving visitors receive the extracted still poster; failed playback retains that poster.

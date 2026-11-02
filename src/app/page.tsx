@@ -7,6 +7,7 @@ import {instagram} from '@/lib/catalog';
 import {Hero} from '@/components/hero';
 import {Discovery} from '@/components/discovery';
 import {VisualJournal} from '@/components/visual-journal';
+import {Remembered} from '@/components/remembered';
 import {BrandIntro} from '@/components/brand-intro';
 import {KritarraEditorialSlider} from '@/components/KritarraEditorialSlider';
 import {signatureEditorialSlides} from '@/lib/signature-editorial';
@@ -21,7 +22,7 @@ export default function Home(){return <main id="main">
  <section className="curated section"><Reveal className="section-heading"><div><span className="eyebrow">THE CONSIDERED SELECTION</span><h2>Yours to <em>discover.</em></h2></div><TextLink href="/collections/">VIEW ALL CREATIONS</TextLink></Reveal><p className="catalogue-disclosure">A first look at the collection experience. Individual creations and prices will follow with Kritarra’s approved catalogue.</p><Catalog compact/></section>
  <section className="craft-story"><Reveal className="craft-visual"><Asset photo={campaign.DW_HenXDHeO} label="Kritarra campaign portrait" position="50% 30%"/></Reveal><Reveal className="craft-copy"><span className="eyebrow">A CLOSER LOOK</span><h2>Beauty lies<br/>in the <em>details.</em></h2><p>A curve. A silhouette. The way a creation catches the light. A considered detail can change the way we see everything.</p><TextLink href="/about/" light>DISCOVER THE KRITARRA PERSPECTIVE</TextLink><span className="craft-note">DIAMONDS. RARE GEMSTONES. YOUR POINT OF VIEW.</span></Reveal></section>
  <VisualJournal/>
- <section className="philosophy"><Reveal><span className="eyebrow">BEYOND ADORNMENT</span><h2>Designed to be<br/><em>remembered.</em></h2><p>For the moments, memories and individuality we carry.</p><span className="philosophy-signature">Kritarra</span></Reveal></section>
+ <Remembered/>
  <section className="social-section section"><Reveal className="section-heading"><div><span className="eyebrow">THE WORLD, THROUGH OUR LENS</span><h2>Keep a little <em>closer.</em></h2></div><a className="text-link" href={instagram} target="_blank" rel="noreferrer">@KRITARRAOFFICIAL <ArrowUpRight size={14}/></a></Reveal><div className="social-grid">{socialCampaigns.map(photo=><a href={photo.source} target="_blank" rel="noreferrer" key={photo.id} aria-label={`View ${photo.alt} on Kritarra’s Instagram`}><Asset photo={photo} sizes="(max-width: 600px) 50vw, 25vw"/><span className="social-hover">EXPLORE ON INSTAGRAM <ArrowUpRight size={16}/></span></a>)}</div><div className="social-bottom"><span>Selected moments from @kritarraofficial.</span><a className="text-link" href={instagram} target="_blank" rel="noreferrer">FOLLOW OUR JOURNEY <ArrowUpRight size={14}/></a></div></section>
  <Newsletter/>
  </main>;}

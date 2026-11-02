@@ -16,32 +16,15 @@ export function Perspective() {
       <Reveal className="perspective-heading">
         <span className="eyebrow">THE KRITARRA PERSPECTIVE</span>
         <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
+        <p>Jewellery that begins with a feeling, and becomes a part of your story.</p>
+        <Link className="perspective-link" href="/about/">THE WORLD OF KRITARRA</Link>
       </Reveal>
 
       <Reveal className="perspective-portrait">
         <figure>
-          <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="100vw" />
+          <Asset photo={campaign.DXJI2FVjFC_} fit="contain" sizes="(max-width: 767px) 100vw, 44vw" />
         </figure>
       </Reveal>
-
-      <div className="perspective-stories">
-        <Reveal className="perspective-story">
-          <div>
-            <span className="perspective-label">THE IDEA</span>
-            <h3>It begins with a feeling.</h3>
-            <p>Beyond adornment, jewellery becomes a reflection of the moments, memories and individuality we carry.</p>
-            <Link className="perspective-link" href="/about/">THE WORLD OF KRITARRA</Link>
-          </div>
-        </Reveal>
-        <Reveal className="perspective-story" delay={0.1}>
-          <div>
-            <span className="perspective-label">THE EXPRESSION</span>
-            <h3>It becomes <em>your story.</em></h3>
-            <p>A personal perspective on beauty. An invitation to explore the possibilities of bespoke diamonds and rare gemstones.</p>
-            <Link className="perspective-link" href="/contact/">BEGIN A CONVERSATION</Link>
-          </div>
-        </Reveal>
-      </div>
     </section>
   );
 }
