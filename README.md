@@ -64,3 +64,8 @@ The perspective section uses an asymmetric editorial spread without a coloured b
 ## Collection discovery
 
 The desktop discovery index previews the corresponding original campaign image when a category is hovered or focused. Every category and the featured photograph link directly to their collection. Mobile shows a two-column photographic index. New user-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images also replace their catalogue preview placeholders. Original sources and hashes are recorded in assets/campaign/sources.json; prices and specifications remain unconfirmed.
+
+
+## Visual journal
+
+The Personal Issue follows the supplied reference with two overlapping capsule-shaped photographs beside a short title, a one-line note and a single collection link. The existing green-earring portrait and monochrome jewellery study remain in use. On mobile the photographs sit above the compact copy; the link keeps its keyboard focus and reduced-motion underline treatment.
