@@ -67,3 +67,18 @@
 @keyframes brand-intro-out{from{opacity:1}to{opacity:0;visibility:hidden}}
 @media(max-width:600px){.site-header.on-home.scrolled{top:-27px}}
 @media(prefers-reduced-motion:reduce){.brand-intro{display:none}}
+
+/* Compact, text-only navigation and an uninterrupted campaign image. */
+.site-header,.site-header.on-home.scrolled{top:0}
+.main-nav{height:80px;padding:0 2.75vw}
+.nav-left{gap:0}
+.nav-menu{min-height:44px;padding:0;font-size:9px;letter-spacing:1.4px}
+.nav-right{display:flex;justify-content:flex-end;font-size:9px;letter-spacing:1.4px}
+.nav-right .nav-collections{display:inline-flex;align-items:center;min-height:44px}
+.menu-services{display:flex;flex-wrap:wrap;gap:0 25px;margin-top:12px;padding:10px 0;border-top:1px solid var(--line);font-size:11px;color:var(--taupe)}
+.menu-services>button{min-height:44px;padding:0}
+.menu-services>button:hover{color:var(--ink)}
+.hero-keyboard-controls{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3}
+.hero-keyboard-action:focus-visible{position:relative;width:auto;height:auto;margin:0;padding:12px 18px;overflow:visible;clip:auto;white-space:nowrap;background:var(--ivory);color:var(--ink);font-size:11px}
+@media(max-width:600px){.main-nav{height:68px;padding:0 18px}.nav-menu,.nav-right{font-size:8px;letter-spacing:1px}.menu-services{font-size:11px;gap:0 22px}}
+@media(prefers-reduced-motion:reduce){.hero-keyboard-playback{display:none}}

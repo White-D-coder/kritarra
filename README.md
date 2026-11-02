@@ -17,7 +17,7 @@ npm run build
 
 This is a working design preview, **not a trading-ready shop**. The hero now uses authentic photographs from the three Instagram posts supplied by the user. Full-resolution files were retrieved from the public post embeds, with locally served responsive WebP derivatives. Other campaign photography, screenshot references, the official product catalogue, prices, policies and commerce credentials remain outstanding. No stock or generated jewellery, invented products, prices, testimonials or heritage claims are used.
 
-- Hero imagery is configured in `src/components/hero.tsx`; originals and attribution are retained in `assets/hero/`. The three images crossfade every eight seconds, pause on hover or keyboard focus, have manual selectors and a pause control, stop while the tab is hidden, and remain static under reduced-motion preferences.
+- Hero imagery is configured in `src/components/hero.tsx`; originals and attribution are retained in `assets/hero/`. The three images crossfade every eight seconds, pause on hover or keyboard focus, provide keyboard-accessible photo selection and pause controls without visible bottom icons, stop while the tab is hidden, and remain static under reduced-motion preferences.
 - Replace the remaining clearly labelled imagery placeholders with approved local assets in `public/images`. `Asset` accepts `src`; wire homepage campaign assets in `src/app/page.tsx` and product photos in `src/lib/catalog.ts`. The asset boxes preserve their ratios to avoid layout shifts.
 - Replace the four category reference entries in `src/lib/catalog.ts` with approved real products: unique IDs/slugs, names, descriptions, INR prices, multiple photographs, variants, specifications, and numeric Shopify variant IDs. Set `preview: false` only for approved products.
 - Configure `NEXT_PUBLIC_SHOPIFY_STORE_ORIGIN` to the approved `https://…myshopify.com` origin. The bag produces a Shopify cart permalink only when **every** selected item has a real price, approved product status and real numeric variant ID. Shopify handles taxes, inventory, shipping, secure payment and order confirmation. No payment credentials or fake confirmation exist here.
@@ -31,7 +31,7 @@ Wishlist and bag persist locally on the current browser, with validation of stor
 
 ## Homepage opening
 
-The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation.
+The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar contains Menu, the wordmark and Collections, with no announcement bar or icons. Search, wishlist, bag and account remain available as text actions inside Menu.
 
 ## Art direction
 

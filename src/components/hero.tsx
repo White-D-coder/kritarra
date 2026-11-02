@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Pause, Play } from 'lucide-react';
 import { useReducedMotion } from 'motion/react';
 
 const photographs = [
@@ -91,23 +90,23 @@ export function Hero() {
 
       <h1 className="sr-only">Kritarra — the art of adornment</h1>
 
-      <div className={`hero-slideshow-controls ${active === 1 ? 'on-light-image' : ''}`} role="group" aria-label="Campaign slideshow controls">
+      <div className="hero-keyboard-controls" role="group" aria-label="Campaign slideshow controls">
         {photographs.map((photo, index) => (
           <button
             key={photo.id}
             type="button"
-            className={`hero-slide-selector ${active === index ? 'is-active' : ''}`}
+            className="sr-only hero-keyboard-action"
             onClick={() => select(index)}
             aria-label={`Show campaign photograph ${index + 1}`}
             aria-pressed={active === index}
-          ><span aria-hidden="true" /></button>
+          >Photograph {index + 1}</button>
         ))}
         <button
           type="button"
-          className="hero-playback"
+          className="sr-only hero-keyboard-action hero-keyboard-playback"
           onClick={() => setPaused(value => !value)}
           aria-label={paused ? 'Play campaign slideshow' : 'Pause campaign slideshow'}
-        >{paused ? <Play size={13} aria-hidden="true" /> : <Pause size={13} aria-hidden="true" />}</button>
+        >{paused ? 'Play slideshow' : 'Pause slideshow'}</button>
       </div>
       <span className="sr-only" aria-live="polite" aria-atomic="true">{announcement}</span>
     </section>
