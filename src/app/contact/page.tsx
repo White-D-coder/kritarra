@@ -1,0 +1,5 @@
+import {ContactForm} from '@/components/contact-form';
+import {contactEmail,instagram} from '@/lib/catalog';
+import {ArrowUpRight} from 'lucide-react';
+export const metadata={title:'A Private Conversation'};
+export default function Contact(){return <main id="main"><div className="page-intro"><span className="eyebrow">AT YOUR CONVENIENCE</span><h1>Let’s begin<br/><em>a conversation.</em></h1><p>A private appointment. A bespoke creation. A question.</p></div><section className="contact-layout section"><div className="contact-aside"><span className="eyebrow">HERE TO ASSIST</span><h2>A little more<br/><em>personal.</em></h2><p>Speak directly with Kritarra to explore available creations, discuss your preferences or arrange an appointment.</p><a className="text-link" href={`mailto:${contactEmail}`}>{contactEmail} <ArrowUpRight size={14}/></a><a className="text-link" href={instagram} target="_blank" rel="noreferrer">@KRITARRAOFFICIAL <ArrowUpRight size={14}/></a><span className="small-copy">Private appointments are subject to confirmation by Kritarra.</span></div><ContactForm/></section></main>;}
