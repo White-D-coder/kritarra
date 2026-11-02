@@ -74,3 +74,8 @@ The Personal Issue follows the supplied reference with two overlapping capsule-s
 ## Remembered film background
 
 The “Designed to be remembered” statement uses locally hosted Full HD emerald-ring footage by Ángel Fernández, sourced from https://www.pexels.com/video/elegant-woman-in-green-dress-with-emerald-ring-32715074/ under https://www.pexels.com/license/. Provenance and the original checksum are in assets/video/sources.json. This is editorial stock footage, not a Kritarra product listing. The silent inline loop loads only near its section, pauses outside the viewport and in hidden tabs, and offers a text pause control. Reduced-motion and data-saving visitors receive the extracted still poster; failed playback retains that poster.
+
+
+## Considered selection
+
+“Yours to discover” uses a photographic mosaic: a large ring portrait, two smaller category views and a wide bracelet detail. Tablet shows a balanced two-column edit; mobile switches to a scrollable gallery with snap alignment and visible overflow cues. Existing catalogue product links and wishlist controls are reused. A single concise note identifies the images as category previews and keeps prices on request; no individual SKUs or prices are invented.

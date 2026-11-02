@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {ArrowUpRight} from 'lucide-react';
 import {Asset,Reveal,TextLink,Perspective} from '@/components/editorial';
-import {Catalog} from '@/components/catalog';
+import {CuratedSelection} from '@/components/curated-selection';
 import {Newsletter} from '@/components/shell';
 import {instagram} from '@/lib/catalog';
 import {Hero} from '@/components/hero';
@@ -19,7 +19,7 @@ export default function Home(){return <main id="main">
  <KritarraEditorialSlider slides={signatureEditorialSlides}/>
  <Perspective/>
  <Discovery/>
- <section className="curated section"><Reveal className="section-heading"><div><span className="eyebrow">THE CONSIDERED SELECTION</span><h2>Yours to <em>discover.</em></h2></div><TextLink href="/collections/">VIEW ALL CREATIONS</TextLink></Reveal><p className="catalogue-disclosure">A first look at the collection experience. Individual creations and prices will follow with Kritarra’s approved catalogue.</p><Catalog compact/></section>
+ <CuratedSelection/>
  <section className="craft-story"><Reveal className="craft-visual"><Asset photo={campaign.DW_HenXDHeO} label="Kritarra campaign portrait" position="50% 30%"/></Reveal><Reveal className="craft-copy"><span className="eyebrow">A CLOSER LOOK</span><h2>Beauty lies<br/>in the <em>details.</em></h2><p>A curve. A silhouette. The way a creation catches the light. A considered detail can change the way we see everything.</p><TextLink href="/about/" light>DISCOVER THE KRITARRA PERSPECTIVE</TextLink><span className="craft-note">DIAMONDS. RARE GEMSTONES. YOUR POINT OF VIEW.</span></Reveal></section>
  <VisualJournal/>
  <Remembered/>
