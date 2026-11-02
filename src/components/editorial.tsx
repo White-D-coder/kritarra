@@ -13,18 +13,22 @@ export function TextLink({href,children,light=false}:{href:string;children:React
 export function Perspective() {
   return (
     <section className="perspective" id="our-craft" aria-labelledby="perspective-heading">
-      <Reveal className="perspective-heading">
-        <span className="eyebrow">THE KRITARRA PERSPECTIVE</span>
-        <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
+      <div className="perspective-stage">
+        <div className="perspective-heading">
+          <span className="eyebrow">THE KRITARRA PERSPECTIVE</span>
+          <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
+        </div>
+        <Reveal className="perspective-portrait">
+          <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="(max-width: 767px) 82vw, 60vw" />
+        </Reveal>
+        <Reveal className="perspective-detail" delay={0.1}>
+          <Asset photo={campaign.DdgV82YseoM} position="45% 25%" sizes="(max-width: 767px) 44vw, 34vw" />
+        </Reveal>
+      </div>
+      <div className="perspective-note">
         <p>Jewellery that begins with a feeling, and becomes a part of your story.</p>
         <Link className="perspective-link" href="/about/">THE WORLD OF KRITARRA</Link>
-      </Reveal>
-
-      <Reveal className="perspective-portrait">
-        <figure>
-          <Asset photo={campaign.DXJI2FVjFC_} fit="contain" sizes="(max-width: 767px) 100vw, 44vw" />
-        </figure>
-      </Reveal>
+      </div>
     </section>
   );
 }

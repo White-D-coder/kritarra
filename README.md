@@ -58,7 +58,7 @@ At the measured 1440×1000 desktop viewport, the current track moves from (0, 0)
 
 ## Kritarra perspective
 
-The perspective section pairs one concise message at left with the complete monochrome portrait at right, without an added background. Mobile places the copy above the portrait. Its single link opens the Kritarra story with a restrained underline animation.
+The perspective section is a compact editorial collage without an added background: oversized type overlaps the monochrome portrait, while an inset close-up shows the circular green-stone earring. A short note and one story link sit below the composition. The overlap adapts to tablet and mobile without covering either jewel.
 
 
 ## Collection discovery

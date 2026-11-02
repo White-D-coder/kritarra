@@ -127,21 +127,23 @@ html{scroll-padding-top:70px}
   .kritarra-editorial:not([data-editorial-motion=diagonal]) .kritarra-editorial-track{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* Perspective: one message with a full portrait, without an added background. */
-.perspective{display:grid;grid-template-columns:.9fr 1fr;align-items:center;gap:clamp(55px,9vw,140px);padding:70px var(--gutter) 90px;background:transparent}
-.perspective-heading{max-width:460px;justify-self:center}
-.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.5px;line-height:1.8;margin-bottom:29px}
-.perspective-heading h2{font-size:clamp(62px,5.5vw,84px);line-height:.98;letter-spacing:-1.8px}
+/* Perspective: overlapping type, a large portrait and an inset jewellery study. */
+.perspective{padding:45px var(--gutter) 65px;background:transparent}
+.perspective-stage{position:relative;aspect-ratio:1.7}
+.perspective-heading{position:absolute;top:2.5%;left:0;z-index:3}
+.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.6px;line-height:1.8;margin-bottom:21px}
+.perspective-heading h2{font-size:clamp(100px,10.8vw,174px);line-height:.87;letter-spacing:-4.5px}
 .perspective-heading h2 em{display:block;white-space:nowrap;font-weight:400}
-.perspective-heading p{max-width:310px;margin-top:27px;font-size:12px;line-height:1.9;color:var(--taupe)}
-.perspective-portrait{width:100%;max-width:550px;justify-self:end}
-.perspective-portrait figure{margin:0}
-.perspective-portrait .asset{width:100%;height:auto;aspect-ratio:1440/1802;background:transparent}
-.perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;margin-top:21px;padding:7px 0;font-size:8px;letter-spacing:1.2px}
+.perspective-portrait{position:absolute;top:0;right:0;width:62%;height:100%;z-index:1}
+.perspective-portrait .asset,.perspective-detail .asset{width:100%;height:100%;background:transparent}
+.perspective-detail{position:absolute;left:9%;bottom:0;width:35%;height:46%;z-index:2;border:8px solid var(--ivory)}
+.perspective-note{display:flex;justify-content:space-between;align-items:center;gap:35px;margin-top:22px}
+.perspective-note p{max-width:390px;font-size:12px;line-height:1.85;color:var(--taupe);text-wrap:balance}
+.perspective-link{display:inline-flex;position:relative;flex:none;align-items:center;min-height:44px;padding:7px 0;font-size:8px;letter-spacing:1.2px}
 .perspective-link::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .perspective-link:hover::after,.perspective-link:focus-visible::after{transform:scaleX(1)}
-@media(min-width:768px) and (max-width:1099px){.perspective{gap:45px;padding-top:45px;padding-bottom:65px}.perspective-heading h2{font-size:clamp(48px,5.9vw,65px);letter-spacing:-1.4px}.perspective-heading .eyebrow{font-size:7px;letter-spacing:1.2px;margin-bottom:23px}.perspective-heading p{font-size:11px;margin-top:22px}.perspective-link{font-size:7px;letter-spacing:1px;margin-top:16px}}
-@media(max-width:767px){.perspective{grid-template-columns:1fr;gap:31px;padding:40px var(--gutter) 60px}.perspective-heading{justify-self:start;max-width:none}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:24px}.perspective-heading h2{font-size:clamp(52px,14vw,76px);letter-spacing:-1.3px}.perspective-heading p{font-size:12px;line-height:1.85;margin-top:23px;max-width:310px}.perspective-link{margin-top:15px;font-size:8px}.perspective-portrait{justify-self:center;max-width:460px}}
+@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:35px;padding-bottom:50px}.perspective-stage{aspect-ratio:1.5}.perspective-heading h2{font-size:clamp(84px,10.8vw,120px);letter-spacing:-3.4px}.perspective-heading .eyebrow{font-size:7px;letter-spacing:1.2px;margin-bottom:19px}.perspective-portrait{width:64%}.perspective-detail{left:5%;width:38%;height:44%;border-width:6px}.perspective-note{margin-top:18px}.perspective-note p{font-size:11px;max-width:330px}.perspective-link{font-size:7px;letter-spacing:1px}}
+@media(max-width:767px){.perspective{padding:30px var(--gutter) 50px}.perspective-stage{aspect-ratio:.64}.perspective-heading{top:0}.perspective-heading .eyebrow{font-size:7px;letter-spacing:1.2px;margin-bottom:18px}.perspective-heading h2{font-size:clamp(64px,17.6vw,110px);letter-spacing:-2px;line-height:.9}.perspective-portrait{top:32%;width:82%;height:61%}.perspective-detail{left:0;width:44%;height:43%;border-width:5px}.perspective-note{display:block;margin-top:24px}.perspective-note p{font-size:12px;line-height:1.8;max-width:350px}.perspective-link{margin-top:12px;font-size:8px}}
 
 /* Discovery pairs an image preview with a quiet index of the four collections. */
 .discovery{padding:50px var(--gutter) 80px}
