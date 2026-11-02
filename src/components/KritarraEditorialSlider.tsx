@@ -60,7 +60,7 @@ export function KritarraEditorialSlider({
             id: `${id}-editorial`,
             trigger: viewport,
             start: 'top 50%',
-            end: () => `+=${Math.round(window.innerHeight * (tablet ? 0.48 : 0.56))}`,
+            end: () => `+=${Math.round(window.innerHeight * (tablet ? 0.48 : 0.62))}`,
             scrub: 0.65,
             invalidateOnRefresh: true,
           },

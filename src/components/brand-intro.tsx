@@ -19,7 +19,7 @@ export function BrandIntro() {
     } catch {
       // The intro still completes when browser storage is unavailable.
     }
-    const timer = window.setTimeout(() => setVisible(false), 1800);
+    const timer = window.setTimeout(() => setVisible(false), 4000);
     return () => window.clearTimeout(timer);
   }, []);
 

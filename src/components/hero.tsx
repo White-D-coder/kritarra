@@ -5,9 +5,9 @@ import { useReducedMotion } from 'motion/react';
 import { campaign } from '@/lib/imagery';
 
 const photographs = [
-  { ...campaign.Dcn9jVgs_Iv, desktop: '50% 8%', mobile: '50% 40%' },
-  { ...campaign.DdgV82YseoM, desktop: '50% 30%', mobile: '46% 45%' },
-  { ...campaign.DdDpJ8EMryv, desktop: '50% 90%', mobile: '60% 60%' },
+  { ...campaign.Dcn9jVgs_Iv, desktop: '50% 8%', mobile: '40% 40%', framing: 'opening' },
+  { ...campaign.DdgV82YseoM, desktop: '50% 30%', mobile: '46% 45%', framing: 'cover' },
+  { ...campaign.DdDpJ8EMryv, desktop: '50% 50%', mobile: '60% 60%', framing: 'portrait' },
 ];
 
 export function Hero() {
@@ -55,9 +55,9 @@ export function Hero() {
         {photographs.map((photo, index) => (
           <div
             key={photo.id}
-            className={`hero-slide ${active === index ? 'is-active' : ''}`}
+            className={`hero-slide hero-slide--${photo.framing} ${active === index ? 'is-active' : ''}`}
             aria-hidden={active !== index}
-            style={{ '--focal-desktop': photo.desktop, '--focal-mobile': photo.mobile } as React.CSSProperties}
+            style={{ '--focal-desktop': photo.desktop, '--focal-mobile': photo.mobile, '--campaign-image': `url("${photo.src}")` } as React.CSSProperties}
           >
             <img
               src={photo.src}

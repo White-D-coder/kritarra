@@ -31,7 +31,7 @@ Wishlist and bag persist locally on the current browser, with validation of stor
 
 ## Homepage opening
 
-The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar follows the supplied reference: menu and search on the left, the wordmark centred, and account, wishlist and bag on the right. There is no announcement bar, logo tagline, lower divider, or visible bottom hero control. The same services also remain available inside Menu.
+The homepage opens with a four-second KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar follows the supplied reference: menu and search on the left, the wordmark centred, and account, wishlist and bag on the right. There is no announcement bar, logo tagline, lower divider, or visible bottom hero control. The same services also remain available inside Menu.
 
 ## Art direction
 
@@ -39,7 +39,7 @@ Warm ivory `#F8F6F1`, champagne `#EAE0D4`, charcoal `#24211F`, taupe `#82766C`, 
 
 ## Sources
 
-- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero opens with Dcn9jVgs_Iv, followed by DdgV82YseoM and DdDpJ8EMryv. The 12 newly supplied photographs are used across the hero, signature edit, perspective, categories, journal and social gallery. See `assets/hero/sources.json` and `assets/campaign/sources.json` for original links, dimensions and file hashes.
+- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero opens with Dcn9jVgs_Iv, optically shifted right on desktop to centre its forehead jewel, followed by DdgV82YseoM and DdDpJ8EMryv. The third photograph retains its complete portrait framing on desktop against a blue backdrop; mobile uses the natural portrait crop. The 12 newly supplied photographs are used across the hero, signature edit, perspective, categories, journal and social gallery. See `assets/hero/sources.json` and `assets/campaign/sources.json` for original links, dimensions and file hashes.
 - https://in.linkedin.com/company/kritarra — brand profile linking the same Instagram and listing info@kritarra.in.
 - Visual direction references (no copied assets): https://www.bulgari.com/en-in/, https://hazoorilaljewellers.com/, https://renuoberoi.com/.
 
@@ -53,4 +53,4 @@ GSAP ScrollTrigger moves only the common parent track. Horizontal travel is meas
 
 Reference limitation: BVLGARI's public text page was accessible, but its interactive site returned Access Denied in Chrome during this session. Exact live-reference endpoints and pinning behaviour could not be verified. Motion endpoints are therefore calibrated against Kritarra's own browser frames, not represented as measured copies of BVLGARI's animation.
 
-At the measured 1440×1000 desktop viewport, the current track moves from (0, 0) to (-455px, -48px) over 560px of document scrolling while all four offsets remain unchanged. Travel recalculates from rendered geometry after resize. Run `KRITARRA_TEST_URL=http://127.0.0.1:3000 npm run test:editorial` against a local static preview to verify diagonal motion, fixed offsets/layering, readable final copy, resize and route cleanup, reduced motion, mobile layout, and the no-JavaScript fallback. Screenshots are written to `/tmp/kritarra-editorial-audit`.
+At the measured 1440×1000 desktop viewport, the current track moves from (0, 0) to (-685px, -48px) over 620px of document scrolling while all four offsets remain unchanged. Text panels use the same width and 4:5 card proportions as the photographs, with a champagne background. Travel recalculates from rendered geometry after resize. Run `KRITARRA_TEST_URL=http://127.0.0.1:3000 npm run test:editorial` against a local static preview to verify diagonal motion, fixed offsets/layering, readable final copy, resize and route cleanup, reduced motion, mobile layout, and the no-JavaScript fallback. Screenshots are written to `/tmp/kritarra-editorial-audit`.
