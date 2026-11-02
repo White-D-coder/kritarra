@@ -44,3 +44,13 @@ Warm ivory `#F8F6F1`, champagne `#EAE0D4`, charcoal `#24211F`, taupe `#82766C`, 
 - Visual direction references (no copied assets): https://www.bulgari.com/en-in/, https://hazoorilaljewellers.com/, https://renuoberoi.com/.
 
 Hero and editorial image use follows the user’s explicit instruction to use the supplied official posts. Category previews remain distinct from individual purchasable products; images do not imply verified availability or specifications. The two referenced screenshots were absent from the attachment.
+
+## Signature diagonal editorial
+
+`KritarraEditorialSlider` replaces the former two-image Signature Edit. Its four panels are configured in `src/lib/signature-editorial.ts` as campaign image, editorial copy, jewellery close-up and editorial copy, with offsets 0/50/100/150px and depths 4/3/2/1.
+
+GSAP ScrollTrigger moves only the common parent track. Horizontal travel is measured from the track and viewport widths; vertical travel is derived from the stagger depth and reduced on tablets. The sequence uses natural document scrolling without pinning. Mobile switches to alternating vertical panels; reduced-motion and unavailable-JavaScript visitors retain a static readable composition. GSAP is imported in a separate client chunk and matchMedia contexts are reverted on breakpoint/preference changes and unmount.
+
+Reference limitation: BVLGARI's public text page was accessible, but its interactive site returned Access Denied in Chrome during this session. Exact live-reference endpoints and pinning behaviour could not be verified. Motion endpoints are therefore calibrated against Kritarra's own browser frames, not represented as measured copies of BVLGARI's animation.
+
+At the measured 1440×1000 desktop viewport, the current track moves from (0, 0) to (-455px, -48px) over 560px of document scrolling while all four offsets remain unchanged. Travel recalculates from rendered geometry after resize. Run `KRITARRA_TEST_URL=http://127.0.0.1:3000 npm run test:editorial` against a local static preview to verify diagonal motion, fixed offsets/layering, readable final copy, resize and route cleanup, reduced motion, mobile layout, and the no-JavaScript fallback. Screenshots are written to `/tmp/kritarra-editorial-audit`.

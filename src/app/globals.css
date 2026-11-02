@@ -95,3 +95,23 @@ html{scroll-padding-top:70px}
 
 /* Keep the signature pendant entirely in its original portrait proportions. */
 .signature-major .asset{height:auto;aspect-ratio:4/5}
+
+/* Signature edit: one coordinated track, four permanently staggered panels. */
+.kritarra-editorial{--editorial-image-width:clamp(350px,30vw,460px);--editorial-text-width:clamp(260px,22vw,320px);--editorial-track-gap:clamp(56px,5.5vw,88px);padding:45px 0 90px;overflow:clip;background:var(--ivory)}
+.kritarra-editorial-heading{margin:0 var(--gutter) 60px}
+.kritarra-editorial-window{position:relative;margin:0 var(--gutter);height:calc(var(--editorial-image-width) * 1.25 + 190px)}
+.kritarra-editorial-track{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:3vw;width:100%}
+.kritarra-editorial-panel{position:relative;min-width:0;margin-top:var(--editorial-offset)}
+.kritarra-editorial-image{margin:0}
+.kritarra-editorial-image .asset{width:100%;height:auto;min-height:0;aspect-ratio:4/5;background:var(--champagne)}
+.kritarra-editorial-image figcaption{margin-top:17px;font-size:7px;letter-spacing:1.6px;line-height:1.8;color:var(--taupe)}
+.kritarra-editorial-panel--text{display:flex;align-items:center;aspect-ratio:4/5}
+.kritarra-editorial-label{display:block;margin-bottom:26px;font-size:7px;letter-spacing:1.7px;line-height:1.8;color:var(--taupe)}
+.kritarra-editorial-copy p{font-family:var(--serif);font-size:clamp(28px,2.5vw,38px);line-height:1.17;letter-spacing:-.45px;color:var(--ink)}
+.kritarra-editorial-copy em{color:#8c7460}
+.kritarra-editorial[data-editorial-motion=diagonal] .kritarra-editorial-track{display:flex;gap:var(--editorial-track-gap);width:max-content;will-change:transform}
+.kritarra-editorial[data-editorial-motion=diagonal] .kritarra-editorial-panel--image{width:var(--editorial-image-width);flex:none}
+.kritarra-editorial[data-editorial-motion=diagonal] .kritarra-editorial-panel--text{width:var(--editorial-text-width);height:calc(var(--editorial-image-width) * 1.25);flex:none;aspect-ratio:auto}
+@media(min-width:768px) and (max-width:1099px){.kritarra-editorial{--editorial-image-width:clamp(220px,26vw,290px);--editorial-text-width:clamp(200px,23vw,250px);--editorial-track-gap:clamp(28px,4vw,44px);padding-top:30px;padding-bottom:65px}.kritarra-editorial-heading{margin-bottom:44px}.kritarra-editorial-copy p{font-size:26px;line-height:1.18}.kritarra-editorial-label{font-size:6px;margin-bottom:21px;letter-spacing:1.2px}.kritarra-editorial-image figcaption{font-size:6px;letter-spacing:1.1px}}
+@media(max-width:767px){.kritarra-editorial{padding:25px 0 65px}.kritarra-editorial-heading{margin-bottom:36px}.kritarra-editorial-heading>.text-link{margin-top:20px}.kritarra-editorial-window{height:auto}.kritarra-editorial-track{display:flex;flex-direction:column;width:100%;gap:42px}.kritarra-editorial-panel{width:100%;margin-top:0}.kritarra-editorial-panel--text{aspect-ratio:auto;max-width:420px;align-self:center;padding:3px 16px}.kritarra-editorial-copy p{font-size:34px;line-height:1.14;letter-spacing:-.4px}.kritarra-editorial-label{font-size:8px;margin-bottom:22px;letter-spacing:1.2px}.kritarra-editorial-image figcaption{font-size:7px;letter-spacing:1.2px;margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.kritarra-editorial-window{height:auto}.kritarra-editorial-track{will-change:auto}}
