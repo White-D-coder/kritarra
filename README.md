@@ -58,7 +58,7 @@ At the measured 1440×1000 desktop viewport, the current track moves from (0, 0)
 
 ## Kritarra perspective
 
-The perspective section uses an asymmetric editorial spread without a coloured background: the complete monochrome campaign portrait at left, a restrained two-line heading and two stories at right. On mobile the heading, portrait and stories follow in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.
+The perspective section has no added background. A horizontal heading introduces a wide monochrome campaign photograph, with two compact story columns underneath. Tablet uses a 3:2 photograph; mobile restores its complete portrait proportions and stacks the stories in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.
 
 
 ## Collection discovery

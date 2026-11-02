@@ -15,12 +15,12 @@ export function Perspective() {
     <section className="perspective" id="our-craft" aria-labelledby="perspective-heading">
       <Reveal className="perspective-heading">
         <span className="eyebrow">THE KRITARRA PERSPECTIVE</span>
-        <h2 id="perspective-heading">An art.<em>An intention.</em></h2>
+        <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
       </Reveal>
 
       <Reveal className="perspective-portrait">
         <figure>
-          <Asset photo={campaign.DXJI2FVjFC_} fit="contain" sizes="(max-width: 767px) 100vw, 46vw" />
+          <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="100vw" />
         </figure>
       </Reveal>
 

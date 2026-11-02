@@ -127,24 +127,23 @@ html{scroll-padding-top:70px}
   .kritarra-editorial:not([data-editorial-motion=diagonal]) .kritarra-editorial-track{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* A restrained perspective, led by the original monochrome portrait. */
-.perspective{display:grid;grid-template-columns:1.25fr .85fr;grid-template-rows:auto 1fr;gap:0 clamp(48px,8vw,120px);padding:70px var(--gutter) 95px;background:transparent}
-.perspective-heading{grid-column:2;grid-row:1;padding:50px 0 40px}
-.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.6px;margin-bottom:24px}
-.perspective-heading h2{font-size:clamp(52px,4.7vw,72px);line-height:1.02;letter-spacing:-1.5px}
-.perspective-heading h2 em{display:block;font-weight:400}
-.perspective-portrait{grid-column:1;grid-row:1 / 3;align-self:start}
+/* Perspective: a horizontal title, cinematic photograph and two quiet chapters. */
+.perspective{padding:65px var(--gutter) 85px;background:transparent}
+.perspective-heading{display:flex;justify-content:space-between;align-items:baseline;gap:35px;margin-bottom:38px}
+.perspective-heading .eyebrow{flex:none;font-size:8px;letter-spacing:1.6px;line-height:1.8;margin:0}
+.perspective-heading h2{font-size:clamp(58px,6.3vw,96px);line-height:1.02;letter-spacing:-1.9px}
+.perspective-heading h2 em{font-weight:400}
 .perspective-portrait figure{margin:0}
-.perspective-portrait .asset{width:100%;height:auto;aspect-ratio:1440 / 1802;background:transparent}
-.perspective-stories{grid-column:2;grid-row:2;display:flex;flex-direction:column;gap:38px;padding-bottom:45px}
+.perspective-portrait .asset{width:100%;height:auto;aspect-ratio:16/9;background:transparent}
+.perspective-stories{display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,8vw,120px);max-width:1050px;margin:40px auto 0}
 .perspective-label{display:block;font-size:7px;line-height:1.8;letter-spacing:1.7px;color:var(--taupe);margin-bottom:12px}
-.perspective-story h3{font-size:clamp(27px,2.2vw,34px);line-height:1.12;letter-spacing:-.4px}
-.perspective-story p{max-width:330px;margin-top:14px;font-size:12px;line-height:1.9;color:var(--taupe)}
+.perspective-story h3{font-size:clamp(29px,2.6vw,38px);line-height:1.1;letter-spacing:-.5px}
+.perspective-story p{max-width:410px;margin-top:15px;font-size:12px;line-height:1.9;color:var(--taupe)}
 .perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;margin-top:12px;padding:7px 0;font-size:8px;letter-spacing:1.2px}
 .perspective-link::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .perspective-link:hover::after,.perspective-link:focus-visible::after{transform:scaleX(1)}
-@media(min-width:768px) and (max-width:1099px){.perspective{grid-template-columns:1fr .9fr;column-gap:40px;padding-top:45px;padding-bottom:65px}.perspective-heading{padding-top:0;padding-bottom:30px}.perspective-heading h2{font-size:52px}.perspective-heading .eyebrow{font-size:7px;letter-spacing:1.2px}.perspective-stories{gap:28px;padding-bottom:0}.perspective-story h3{font-size:28px}.perspective-story p{font-size:11px;line-height:1.8}.perspective-link{font-size:7px;letter-spacing:1px}}
-@media(max-width:767px){.perspective{display:flex;flex-direction:column;padding:45px var(--gutter) 65px}.perspective-heading{padding:0 0 30px}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:22px}.perspective-heading h2{font-size:54px;letter-spacing:-1.2px}.perspective-portrait{width:100%}.perspective-stories{gap:32px;padding:33px 0 0}.perspective-label{font-size:8px;margin-bottom:12px}.perspective-story h3{font-size:31px}.perspective-story p{font-size:12px;line-height:1.85}.perspective-link{font-size:8px}}
+@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:45px;padding-bottom:65px}.perspective-heading{display:block;margin-bottom:30px}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:18px}.perspective-heading h2{font-size:68px;letter-spacing:-1.6px}.perspective-portrait .asset{aspect-ratio:3/2}.perspective-stories{gap:40px;margin-top:32px}.perspective-story h3{font-size:31px}.perspective-story p{font-size:11px;line-height:1.85}.perspective-link{font-size:8px;letter-spacing:1px}}
+@media(max-width:767px){.perspective{padding:40px var(--gutter) 60px}.perspective-heading{display:block;margin-bottom:28px}.perspective-heading .eyebrow{font-size:8px;letter-spacing:1.3px;margin-bottom:22px}.perspective-heading h2{font-size:clamp(50px,14vw,78px);letter-spacing:-1.2px;line-height:1.01}.perspective-heading h2 em{display:block}.perspective-portrait .asset{aspect-ratio:1440/1802}.perspective-stories{grid-template-columns:1fr;gap:28px;margin-top:31px}.perspective-label{font-size:8px;margin-bottom:12px}.perspective-story h3{font-size:31px}.perspective-story p{font-size:12px;line-height:1.85}.perspective-link{font-size:8px}}
 
 /* Discovery pairs an image preview with a quiet index of the four collections. */
 .discovery{padding:50px var(--gutter) 80px}
