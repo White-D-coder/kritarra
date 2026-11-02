@@ -212,3 +212,16 @@ html{scroll-padding-top:70px}
 .philosophy-motion-control{position:absolute;bottom:22px;right:var(--gutter);min-height:44px;padding:8px 0;font-size:9px;letter-spacing:.8px;color:var(--ivory);text-decoration:underline;text-underline-offset:5px}
 @media(max-width:767px){.philosophy.philosophy-film{height:80svh;min-height:650px;max-height:850px;align-items:flex-end;justify-content:center;text-align:center;padding:65px var(--gutter) 85px}.philosophy-media img,.philosophy-media video{object-position:44% 50%}.philosophy-film::after{background:linear-gradient(180deg,rgba(0,15,11,.12),rgba(0,15,11,.18) 28%,rgba(0,15,11,.76) 100%)}.philosophy-film h2{font-size:clamp(52px,13.5vw,74px);letter-spacing:-1.1px}.philosophy-film .eyebrow{font-size:8px;margin-bottom:23px}.philosophy-film p{font-size:12px;max-width:270px;margin:22px auto 0}.philosophy-film .philosophy-signature{margin-top:23px}.philosophy-motion-control{font-size:9px;bottom:15px}}
 @media(prefers-reduced-motion:reduce){.philosophy-media video{transition:none}}
+
+/* A more compact detail story, with a definite image frame. */
+.craft-story{height:500px;min-height:0}
+.craft-visual{height:100%;min-height:0}
+.craft-visual .asset{height:100%;min-height:0}
+.craft-visual .asset img{position:absolute;inset:0}
+.craft-copy{min-height:0;padding:42px 6vw}
+.craft-copy .eyebrow{margin-bottom:21px}
+.craft-copy h2{font-size:clamp(50px,4.6vw,68px)}
+.craft-copy p{margin:20px 0 13px;line-height:1.85}
+.craft-note{margin-top:26px}
+@media(min-width:601px) and (max-width:1099px){.craft-story{height:450px}.craft-copy{padding:32px 4.5vw}.craft-copy h2{font-size:50px}.craft-copy .eyebrow{margin-bottom:18px}.craft-copy p{margin:17px 0 11px}.craft-note{margin-top:22px}}
+@media(max-width:600px){.craft-story{height:auto}.craft-visual{height:300px}.craft-copy{padding:34px 26px;min-height:0}.craft-copy .eyebrow{margin-bottom:18px}.craft-copy h2{font-size:clamp(46px,12vw,58px)}.craft-copy p{margin:18px 0 12px}.craft-note{margin-top:20px;font-size:6px;line-height:1.8}}
