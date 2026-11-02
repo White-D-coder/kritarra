@@ -54,3 +54,8 @@ GSAP ScrollTrigger moves only the common parent track. Horizontal travel is meas
 Reference limitation: BVLGARI's public text page was accessible, but its interactive site returned Access Denied in Chrome during this session. Exact live-reference endpoints and pinning behaviour could not be verified. Motion endpoints are therefore calibrated against Kritarra's own browser frames, not represented as measured copies of BVLGARI's animation.
 
 At the measured 1440×1000 desktop viewport, the current track moves from (0, 0) to (-685px, -48px) over 620px of document scrolling while all four offsets remain unchanged. Text panels use the same width and 4:5 card proportions as the photographs, with a champagne background. Travel recalculates from rendered geometry after resize. Run `KRITARRA_TEST_URL=http://127.0.0.1:3000 npm run test:editorial` against a local static preview to verify diagonal motion, fixed offsets/layering, readable final copy, resize and route cleanup, reduced motion, mobile layout, and the no-JavaScript fallback. Screenshots are written to `/tmp/kritarra-editorial-audit`.
+
+
+## Kritarra perspective
+
+The perspective section uses an asymmetric editorial spread: the complete campaign portrait at left, a large two-line heading and two numbered stories at right. On mobile the heading, portrait and stories follow in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.

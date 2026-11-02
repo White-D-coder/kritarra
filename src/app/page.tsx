@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {ArrowUpRight} from 'lucide-react';
-import {Asset,Reveal,TextLink,Triptych} from '@/components/editorial';
+import {Asset,Reveal,TextLink,Perspective} from '@/components/editorial';
 import {Catalog} from '@/components/catalog';
 import {Newsletter} from '@/components/shell';
 import {instagram} from '@/lib/catalog';
@@ -14,7 +14,7 @@ export default function Home(){return <main id="main">
  <Hero/>
  <section className="intro-statement section"><Reveal><span className="eyebrow">A WORLD OF KRITARRA</span><h2>Some things are worn.<br/>Others become <em>part of you.</em></h2><p>A quiet celebration of individuality.<br/>Discover jewellery through a more personal lens.</p></Reveal></section>
  <KritarraEditorialSlider slides={signatureEditorialSlides}/>
- <Triptych/>
+ <Perspective/>
  <section className="categories-section section"><Reveal className="section-heading"><div><span className="eyebrow">FIND WHAT SPEAKS TO YOU</span><h2>The art of <em>discovery.</em></h2></div><p>Different expressions.<br/>An unmistakably personal choice.</p></Reveal><div className="category-editorial">{[{name:'Rings',line:'A world in a small detail.',photo:undefined},{name:'Necklaces',line:'A perspective, beautifully expressed.',photo:campaign.DRE3aGHDKCw},{name:'Earrings',line:'A little closer to individuality.',photo:campaign.DMuceFtvoNP},{name:'Bracelets',line:'Something to hold close.',photo:undefined}].map((c,i)=><Reveal key={c.name} delay={i*.06} className={`category-item category-${i}`}><Link href={`/collections/${c.name.toLowerCase()}/`}><Asset photo={c.photo} label={`${c.name} photography`} number={String(i+5).padStart(2,'0')} position="50% 30%"/><div className="category-caption"><div><span className="tiny">0{i+1} / DISCOVER</span><h3>{c.name}</h3><p>{c.line}</p></div><ArrowUpRight size={23} strokeWidth={1}/></div></Link></Reveal>)}</div></section>
  <section className="curated section"><Reveal className="section-heading"><div><span className="eyebrow">THE CONSIDERED SELECTION</span><h2>Yours to <em>discover.</em></h2></div><TextLink href="/collections/">VIEW ALL CREATIONS</TextLink></Reveal><p className="catalogue-disclosure">A first look at the collection experience. Individual creations and prices will follow with Kritarra’s approved catalogue.</p><Catalog compact/></section>
  <section className="craft-story"><Reveal className="craft-visual"><Asset photo={campaign.DW_HenXDHeO} label="Kritarra campaign portrait" position="50% 30%"/></Reveal><Reveal className="craft-copy"><span className="eyebrow">A CLOSER LOOK</span><h2>Beauty lies<br/>in the <em>details.</em></h2><p>A curve. A silhouette. The way a creation catches the light. A considered detail can change the way we see everything.</p><TextLink href="/about/" light>DISCOVER THE KRITARRA PERSPECTIVE</TextLink><span className="craft-note">DIAMONDS. RARE GEMSTONES. YOUR POINT OF VIEW.</span></Reveal></section>
