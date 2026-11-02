@@ -27,3 +27,43 @@
 .hero-discover:hover::after,.hero-discover:focus-visible::after{transform:scaleX(1);transform-origin:left center}
 @media(hover:none){.hero-discover::after{transform:scaleX(1);opacity:.45}}
 @media(max-width:600px){.hero-discover{font-size:10px;letter-spacing:1.7px;gap:18px}}
+/* Official campaign photography supplied through Kritarra's Instagram posts. */
+.hero-campaign{background:#232b28;color:#fff9ed}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1400ms cubic-bezier(.22,1,.36,1)}
+.hero-slide.is-active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:var(--focal-desktop)}
+.hero-campaign .hero-copy{color:#fff9ed}
+.hero-campaign h1{font-size:clamp(64px,7.1vw,112px);text-shadow:0 2px 24px #00000024}
+.hero-campaign h1 em,.hero-campaign .hero-copy p,.hero-campaign .hero-discover{color:#fff9ed}
+.hero-campaign .hero-copy .eyebrow{color:#fff9ed;text-shadow:0 1px 8px #00000070}
+.hero-campaign .hero-copy p{ text-shadow:0 1px 8px #00000070 }
+.hero-campaign .hero-footer>a{border-color:#fff9ed66}
+.hero-slideshow-controls{position:absolute;left:50%;bottom:19px;transform:translateX(-50%);z-index:3;display:flex;align-items:center;gap:3px;color:#fff9ed}
+.hero-slide-selector,.hero-playback{display:flex;align-items:center;justify-content:center;width:36px;min-height:44px;padding:0}
+.hero-slide-selector span{display:block;width:22px;height:1px;background:currentColor;opacity:.35;transition:opacity .3s}
+.hero-slide-selector:hover span,.hero-slide-selector.is-active span{opacity:1}
+.hero-playback{width:30px;margin-left:8px}
+@media(min-width:1101px){.hero-campaign{min-height:800px}}
+@media(max-width:1100px){.hero-campaign h1{font-size:80px}}
+@media(max-width:800px){.hero-campaign h1{font-size:64px}}
+@media(max-width:600px){.hero-slide img{object-position:var(--focal-mobile)}.hero-campaign h1{font-size:72px}.hero-slideshow-controls{bottom:16px}.hero-slide-selector{width:36px}.hero-playback{width:36px}}
+@media(max-width:375px){.hero-campaign h1{font-size:66px}}
+
+.hero-slideshow-controls.on-light-image{color:var(--ink)}
+
+@media(prefers-reduced-motion:reduce){.hero-playback{display:none}}
+
+/* The homepage navigation sits directly over the opening campaign image. */
+.site-header.on-home{position:fixed;top:0;left:0;right:0;background:transparent;box-shadow:none;transition:background .45s,color .35s,top .35s,box-shadow .35s}
+.site-header.on-home:not(.scrolled){color:#fff9ed}
+.site-header.on-home:not(.scrolled) .announcement{background:transparent;color:#fff9ed}
+.site-header.on-home:not(.scrolled) .main-nav{border-bottom-color:#fff9ed30}
+.site-header.on-home.scrolled{top:-29px;background:var(--ivory);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hero.hero-campaign{height:100svh;min-height:620px;max-height:1200px}
+.hero-campaign::after{content:'';position:absolute;inset:0 0 auto;height:250px;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.55) 48%,transparent 100%);pointer-events:none;z-index:1}
+.brand-intro{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:var(--ivory);color:var(--ink);pointer-events:none;animation:brand-intro-out .6s cubic-bezier(.22,1,.36,1) 1.2s both}
+.brand-intro>span{font-family:var(--serif);font-size:clamp(38px,6.5vw,96px);font-weight:400;line-height:1;letter-spacing:.16em;padding-left:.16em;animation:brand-wordmark-in .85s cubic-bezier(.22,1,.36,1) .1s both}
+@keyframes brand-wordmark-in{from{opacity:0;transform:translateY(9px);letter-spacing:.22em}to{opacity:1;transform:translateY(0);letter-spacing:.16em}}
+@keyframes brand-intro-out{from{opacity:1}to{opacity:0;visibility:hidden}}
+@media(max-width:600px){.site-header.on-home.scrolled{top:-27px}}
+@media(prefers-reduced-motion:reduce){.brand-intro{display:none}}

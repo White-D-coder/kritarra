@@ -15,9 +15,10 @@ npm run build
 
 ## Brand data and launch requirements
 
-This is a working design preview, **not a trading-ready shop**. The requested campaign photography, screenshot references, official product catalogue, prices, policies and commerce credentials were not supplied. Instagram’s public bio was accessible; campaign posts were not. No stock or generated jewellery, invented products, prices, testimonials or heritage claims are used.
+This is a working design preview, **not a trading-ready shop**. The hero now uses authentic photographs from the three Instagram posts supplied by the user. Full-resolution files were retrieved from the public post embeds, with locally served responsive WebP derivatives. Other campaign photography, screenshot references, the official product catalogue, prices, policies and commerce credentials remain outstanding. No stock or generated jewellery, invented products, prices, testimonials or heritage claims are used.
 
-- Replace the clearly labelled imagery placeholders with approved local assets in `public/images`. `Asset` accepts `src`; wire homepage campaign assets in `src/app/page.tsx` and product photos in `src/lib/catalog.ts`. The asset boxes preserve their ratios to avoid layout shifts.
+- Hero imagery is configured in `src/components/hero.tsx`; originals and attribution are retained in `assets/hero/`. The three images crossfade every eight seconds, pause on hover or keyboard focus, have manual selectors and a pause control, stop while the tab is hidden, and remain static under reduced-motion preferences.
+- Replace the remaining clearly labelled imagery placeholders with approved local assets in `public/images`. `Asset` accepts `src`; wire homepage campaign assets in `src/app/page.tsx` and product photos in `src/lib/catalog.ts`. The asset boxes preserve their ratios to avoid layout shifts.
 - Replace the four category reference entries in `src/lib/catalog.ts` with approved real products: unique IDs/slugs, names, descriptions, INR prices, multiple photographs, variants, specifications, and numeric Shopify variant IDs. Set `preview: false` only for approved products.
 - Configure `NEXT_PUBLIC_SHOPIFY_STORE_ORIGIN` to the approved `https://…myshopify.com` origin. The bag produces a Shopify cart permalink only when **every** selected item has a real price, approved product status and real numeric variant ID. Shopify handles taxes, inventory, shipping, secure payment and order confirmation. No payment credentials or fake confirmation exist here.
 - Configure `NEXT_PUBLIC_CUSTOMER_ACCOUNT_URL` for the approved hosted customer account service. No authentication is simulated.
@@ -28,14 +29,18 @@ This is a working design preview, **not a trading-ready shop**. The requested ca
 
 Wishlist and bag persist locally on the current browser, with validation of stored data. They do not sync to an account. Keyboard trapping, Escape dismissal, focus return, inert background, labelled controls, skip navigation and reduced-motion support are included.
 
+## Homepage opening
+
+The homepage opens with a brief KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation.
+
 ## Art direction
 
 Warm ivory `#F8F6F1`, champagne `#EAE0D4`, charcoal `#24211F`, taupe `#82766C`, antique gold `#AD956B`. Cormorant Garamond with Manrope. Editorial asymmetry, restrained borders, generous spacing, and one scroll-linked three-panel sequence. Design tokens live in `src/app/globals.css`.
 
 ## Sources
 
-- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. Post imagery was unavailable to the current session.
+- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero uses user-selected posts DdgV82YseoM, De1ch5_P4xb and DdDpJ8EMryv. See `assets/hero/sources.json` for original links, dimensions and file hashes.
 - https://in.linkedin.com/company/kritarra — brand profile linking the same Instagram and listing info@kritarra.in.
 - Visual direction references (no copied assets): https://www.bulgari.com/en-in/, https://hazoorilaljewellers.com/, https://renuoberoi.com/.
 
-No campaign-image licensing is assumed. The two referenced screenshots were absent from the attachment.
+Hero image use follows the user’s explicit instruction to use those three official posts; permission for any other campaign assets remains outstanding. The two referenced screenshots were absent from the attachment.
