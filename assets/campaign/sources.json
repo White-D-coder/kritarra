@@ -218,5 +218,49 @@
         "width": 1920
       }
     ]
+  },
+  {
+    "code": "Dc-ogQ-vgSm",
+    "source": "https://www.instagram.com/kritarraofficial/p/Dc-ogQ-vgSm/",
+    "original": "assets/campaign/Dc-ogQ-vgSm.jpg",
+    "width": 3277,
+    "height": 4096,
+    "sha256": "9a35603874fb64a342bb870265b36b3ce1aa1a191af50101b1fabf5063310b02",
+    "outputs": [
+      {
+        "src": "/images/campaign/Dc-ogQ-vgSm-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/campaign/Dc-ogQ-vgSm-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/campaign/Dc-ogQ-vgSm-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  {
+    "code": "DLK5DXfNPGi",
+    "source": "https://www.instagram.com/kritarraofficial/p/DLK5DXfNPGi/",
+    "original": "assets/campaign/DLK5DXfNPGi.jpg",
+    "width": 1440,
+    "height": 1802,
+    "sha256": "0c330e8c46d93f4b558dee65a0747eb3b5073977e095b380889d53ba159bfb51",
+    "outputs": [
+      {
+        "src": "/images/campaign/DLK5DXfNPGi-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/campaign/DLK5DXfNPGi-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/campaign/DLK5DXfNPGi-1440.webp",
+        "width": 1440
+      }
+    ]
   }
 ]

@@ -21,13 +21,11 @@ export function Perspective() {
       <Reveal className="perspective-portrait">
         <figure>
           <Asset photo={campaign.DXJI2FVjFC_} fit="contain" sizes="(max-width: 767px) 100vw, 46vw" />
-          <figcaption><span>A PERSONAL PERSPECTIVE</span><span>KRITARRA / 01</span></figcaption>
         </figure>
       </Reveal>
 
       <div className="perspective-stories">
         <Reveal className="perspective-story">
-          <span className="perspective-number" aria-hidden="true">01</span>
           <div>
             <span className="perspective-label">THE IDEA</span>
             <h3>It begins with a feeling.</h3>
@@ -36,7 +34,6 @@ export function Perspective() {
           </div>
         </Reveal>
         <Reveal className="perspective-story" delay={0.1}>
-          <span className="perspective-number" aria-hidden="true">02</span>
           <div>
             <span className="perspective-label">THE EXPRESSION</span>
             <h3>It becomes <em>your story.</em></h3>

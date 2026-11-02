@@ -31,7 +31,7 @@ Wishlist and bag persist locally on the current browser, with validation of stor
 
 ## Homepage opening
 
-The homepage opens with a four-second KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar follows the supplied reference: menu and search on the left, the wordmark centred, and account, wishlist and bag on the right. There is no announcement bar, logo tagline, lower divider, or visible bottom hero control. The same services also remain available inside Menu.
+The homepage opens with a 5.2-second KRITARRA wordmark intro once per tab session, followed by a full-width campaign slideshow without visible text. Reduced-motion visitors skip the intro and automatic slide rotation. The homepage navbar overlays the image transparently at the top and becomes ivory on scroll; other pages retain their solid navigation. The compact navbar follows the supplied reference: menu and search on the left, the wordmark centred, and account, wishlist and bag on the right. There is no announcement bar, logo tagline, lower divider, or visible bottom hero control. The same services also remain available inside Menu.
 
 ## Art direction
 
@@ -39,7 +39,7 @@ Warm ivory `#F8F6F1`, champagne `#EAE0D4`, charcoal `#24211F`, taupe `#82766C`, 
 
 ## Sources
 
-- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero opens with Dcn9jVgs_Iv, optically shifted right on desktop to centre its forehead jewel, followed by DdgV82YseoM and DdDpJ8EMryv. The third photograph retains its complete portrait framing on desktop against a blue backdrop; mobile uses the natural portrait crop. The 12 newly supplied photographs are used across the hero, signature edit, perspective, categories, journal and social gallery. See `assets/hero/sources.json` and `assets/campaign/sources.json` for original links, dimensions and file hashes.
+- Official source: https://www.instagram.com/kritarraofficial/ — public bio: Private Jeweller; Crafting Bespoke Diamonds & Rare Gemstones; Exclusive Appointments. The hero opens with Dcn9jVgs_Iv, optically shifted right on desktop to centre its forehead jewel, followed by DdgV82YseoM and DdDpJ8EMryv. The third photograph fills the hero again, with its focus centred vertically. The 12 newly supplied photographs are used across the hero, signature edit, perspective, categories, journal and social gallery. See `assets/hero/sources.json` and `assets/campaign/sources.json` for original links, dimensions and file hashes.
 - https://in.linkedin.com/company/kritarra — brand profile linking the same Instagram and listing info@kritarra.in.
 - Visual direction references (no copied assets): https://www.bulgari.com/en-in/, https://hazoorilaljewellers.com/, https://renuoberoi.com/.
 
@@ -58,4 +58,9 @@ At the measured 1440×1000 desktop viewport, the current track moves from (0, 0)
 
 ## Kritarra perspective
 
-The perspective section uses an asymmetric editorial spread: the complete campaign portrait at left, a large two-line heading and two numbered stories at right. On mobile the heading, portrait and stories follow in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.
+The perspective section uses an asymmetric editorial spread without a coloured background: the complete monochrome campaign portrait at left, a restrained two-line heading and two stories at right. On mobile the heading, portrait and stories follow in reading order. Links use a restrained underline animation without arrows, with reduced-motion support.
+
+
+## Collection discovery
+
+The desktop discovery index previews the corresponding original campaign image when a category is hovered or focused. Every category and the featured photograph link directly to their collection. Mobile shows a two-column photographic index. New user-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images also replace their catalogue preview placeholders. Original sources and hashes are recorded in assets/campaign/sources.json; prices and specifications remain unconfirmed.
