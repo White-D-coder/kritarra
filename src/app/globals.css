@@ -306,3 +306,11 @@ html{scroll-padding-top:70px}
 .newsletter-invitation .email-field button:hover{background:transparent;color:#806b57}
 .newsletter-invitation .email-field button:hover::after,.newsletter-invitation .email-field button:focus-visible::after{transform:scaleX(1)}
 @media(prefers-reduced-motion:reduce){.text-link,.text-link::after,.newsletter-invitation .email-field button,.newsletter-invitation .email-field button::after,.perspective-link::after,.journal-collection-link::after,.curated-all-link::after{transition:none}}
+
+/* User-supplied texture at 40%, with a separate fully opaque text layer. */
+.intro-statement{position:relative;isolation:isolate;overflow:hidden;background:var(--ivory)}
+.intro-statement-texture{position:absolute;inset:0;z-index:0;pointer-events:none}
+.intro-statement-texture img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.4}
+.intro-statement-content{position:relative;z-index:1}
+.intro-statement .eyebrow,.intro-statement p{color:var(--ink)}
+.intro-statement h2 em{color:#554332}

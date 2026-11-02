@@ -1,0 +1,23 @@
+[
+  {
+    "source": "User-supplied pexels-robert-clark-504241532-28120762.jpg",
+    "original": "assets/textures/ivory-texture.jpg",
+    "width": 6240,
+    "height": 4160,
+    "sha256": "a44bbd76eb0eb4dc552a4b450b52075ea38647040b065e3be49d51baa450fb56",
+    "outputs": [
+      {
+        "src": "/images/textures/ivory-texture-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/textures/ivory-texture-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/images/textures/ivory-texture-2400.webp",
+        "width": 2400
+      }
+    ]
+  }
+]

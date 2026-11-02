@@ -15,7 +15,7 @@ import {campaign,socialCampaigns} from '@/lib/imagery';
 export default function Home(){return <main id="main">
  <BrandIntro/>
  <Hero/>
- <section className="intro-statement section"><Reveal><span className="eyebrow">A WORLD OF KRITARRA</span><h2>Some things are worn.<br/>Others become <em>part of you.</em></h2><p>A quiet celebration of individuality.<br/>Discover jewellery through a more personal lens.</p></Reveal></section>
+ <section className="intro-statement section" id="world-of-kritarra"><div className="intro-statement-texture" aria-hidden="true"><img src="/images/textures/ivory-texture-2400.webp" srcSet="/images/textures/ivory-texture-960.webp 960w, /images/textures/ivory-texture-1600.webp 1600w, /images/textures/ivory-texture-2400.webp 2400w" sizes="100vw" width={6240} height={4160} alt="" loading="lazy" decoding="async"/></div><Reveal className="intro-statement-content"><span className="eyebrow">A WORLD OF KRITARRA</span><h2>Some things are worn.<br/>Others become <em>part of you.</em></h2><p>A quiet celebration of individuality.<br/>Discover jewellery through a more personal lens.</p></Reveal></section>
  <KritarraEditorialSlider slides={signatureEditorialSlides}/>
  <Perspective/>
  <Discovery/>
