@@ -322,5 +322,28 @@
     "height": 1802,
     "alt": "A portrait with a gold-toned geometric bracelet worn across the forehead",
     "source": "https://www.instagram.com/kritarraofficial/p/DLK5DXfNPGi/"
+  },
+  "DOgKA81j9ju": {
+    "id": "DOgKA81j9ju",
+    "src": "/images/campaign/DOgKA81j9ju-1440.webp",
+    "srcSet": "/images/campaign/DOgKA81j9ju-640.webp 640w, /images/campaign/DOgKA81j9ju-960.webp 960w, /images/campaign/DOgKA81j9ju-1440.webp 1440w",
+    "variants": [
+      {
+        "src": "/images/campaign/DOgKA81j9ju-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/campaign/DOgKA81j9ju-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/campaign/DOgKA81j9ju-1440.webp",
+        "width": 1440
+      }
+    ],
+    "width": 1440,
+    "height": 1796,
+    "alt": "An emerald gemstone resting on folded blue silk",
+    "source": "https://www.instagram.com/kritarraofficial/p/DOgKA81j9ju/"
   }
 }

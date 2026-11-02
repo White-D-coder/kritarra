@@ -262,5 +262,27 @@
         "width": 1440
       }
     ]
+  },
+  {
+    "code": "DOgKA81j9ju",
+    "source": "https://www.instagram.com/kritarraofficial/p/DOgKA81j9ju/",
+    "original": "assets/campaign/DOgKA81j9ju.jpg",
+    "width": 1440,
+    "height": 1796,
+    "sha256": "cbeace127c2fe57958a6b39e7914992e2af777cd4a9d32cf7102df4c4e78f9f4",
+    "outputs": [
+      {
+        "src": "/images/campaign/DOgKA81j9ju-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/campaign/DOgKA81j9ju-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/campaign/DOgKA81j9ju-1440.webp",
+        "width": 1440
+      }
+    ]
   }
 ]

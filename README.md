@@ -84,3 +84,8 @@ The “Designed to be remembered” statement uses locally hosted Full HD emeral
 ## The Kritarra letter
 
 The invitation closes the page with a centred serif headline, one short introductory line and an underlined email field with a text-labelled submit button. The headline stacks on mobile; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
+
+
+## Footer campaign background
+
+The footer uses the user-supplied emerald-on-blue-silk post (DOgKA81j9ju) as a responsive, decorative image at exactly 50% opacity. A separate 20% black overlay and white text maintain contrast without reducing content opacity. Footer links, hover/focus states and legal text remain readable; source and checksum are recorded in assets/campaign/sources.json.
