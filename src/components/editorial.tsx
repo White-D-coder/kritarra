@@ -5,8 +5,8 @@ import Link from 'next/link';
 export function Reveal({children,className='',delay=0}:{children:React.ReactNode;className?:string;delay?:number}) {
   const reduce=useReducedMotion();return <motion.div className={className} initial={false} whileInView={reduce?{opacity:1,y:0}:{opacity:[0,1],y:[24,0]}} viewport={{once:true,amount:.12}} transition={{duration:.85,delay,ease:[.22,1,.36,1]}}>{children}</motion.div>;
 }
-export function Asset({label='Campaign photograph',className='',number='01',src,priority=false}:{label?:string;className?:string;number?:string;src?:string;priority?:boolean}) {
-  return <div className={`asset ${className}`}>{src?<img src={src} alt={label} loading={priority?'eager':'lazy'} />:<><span className="asset-number">K / {number}</span><span className="asset-monogram" aria-hidden="true">K</span><span className="asset-caption">{label}<small>Approved brand imagery to follow</small></span><span className="asset-corner" aria-hidden="true"/></>}</div>;
+export function Asset({label='Campaign photograph',className='',number='01',src,priority=false,showLabels=true}:{label?:string;className?:string;number?:string;src?:string;priority?:boolean;showLabels?:boolean}) {
+  return <div className={`asset ${className}`}>{src?<img src={src} alt={label} loading={priority?'eager':'lazy'} />:<>{showLabels&&<span className="asset-number">K / {number}</span>}<span className="asset-monogram" aria-hidden="true">K</span>{showLabels&&<span className="asset-caption">{label}<small>Approved brand imagery to follow</small></span>}<span className="asset-corner" aria-hidden="true"/></>}</div>;
 }
 export function TextLink({href,children,light=false}:{href:string;children:React.ReactNode;light?:boolean}){return <Link href={href} className={`text-link ${light?'light':''}`}>{children}<span aria-hidden="true">↗</span></Link>;}
 export function Triptych(){
