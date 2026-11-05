@@ -83,7 +83,7 @@ The “Designed to be remembered” statement uses locally hosted Full HD emeral
 
 ## The Kritarra letter
 
-The invitation pairs a left-aligned serif headline with an underlined email field and a slim outlined submit button. The two columns stack on mobile; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
+The invitation uses a centered headline with sequential line reveals and a single-row email field and underlined action. The form enters once and remains still while in use; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
 
 
 ## Footer campaign background
@@ -93,6 +93,10 @@ The footer uses the user-supplied emerald-on-blue-silk post (DOgKA81j9ju) as a r
 
 ## Typography and letter signup
 
-EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 11px, and the email input stays at 16px. The letter invitation uses a two-column editorial layout with a fine outlined action and keyboard-visible hover treatment; its existing submission feedback and privacy navigation are retained.
+EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 11px, and the email input stays at 16px. The letter invitation uses a centered editorial layout with an underlined action and visible keyboard focus; its existing submission feedback and privacy navigation are retained.
 
 Supporting text uses sentence case, restrained tracking and 12px labels. Short homepage descriptions use 14px text and direct wording. The upright display typography and border-free newsletter section are retained.
+
+## Animated statement and detail story
+
+The opening statement uses offset lines above the supplied 40% texture. The texture and second line drift gently with scrolling. The detail story places the copy on the left and the photograph on the right, without a coloured panel; a one-time image mask and a small vertical photo drift supply motion. Entry masks keep server-rendered text visible, reduced motion stays static, and none of these three sections zooms images on hover.

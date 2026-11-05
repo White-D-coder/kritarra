@@ -10,6 +10,7 @@ import {ProductCard} from './catalog';
 import {categories,products,instagram,contactEmail,priceLabel} from '@/lib/catalog';
 import {checkoutUrl,commerceConfig} from '@/lib/commerce';
 import {campaign} from '@/lib/imagery';
+import {LineReveal,sectionEase,useQuietMotion} from './section-motion';
 
 export function Header(){
  const {setPanel,panel,bag,wishlist}=useStore();
@@ -34,6 +35,7 @@ export function Header(){
 
 export function Newsletter() {
  const [email,setEmail]=useState(''),[status,setStatus]=useState(''),[busy,setBusy]=useState(false);
+ const reduce=useQuietMotion();
  async function submit(event:React.FormEvent) {
   event.preventDefault();
   setStatus('');
@@ -54,23 +56,25 @@ export function Newsletter() {
   }
  }
  return (
-  <section className="newsletter newsletter-invitation" id="newsletter" aria-labelledby="newsletter-heading">
+  <section className="newsletter newsletter-invitation" id="newsletter" aria-labelledby="newsletter-heading" data-section-motion={reduce?'static':'entrance'}>
    <div className="newsletter-intro">
     <span className="eyebrow">The Kritarra letter</span>
-    <h2 id="newsletter-heading"><span>An invitation</span> <span>to <em>discover.</em></span></h2>
+    <h2 id="newsletter-heading"><LineReveal reduce={reduce}>An invitation</LineReveal> <LineReveal reduce={reduce} delay={.12}>to <em>discover.</em></LineReveal></h2>
     <p>New pieces and occasional notes from Kritarra.</p>
    </div>
-   <form className="letter-form" onSubmit={submit} aria-busy={busy}>
+   <motion.form className="letter-form" onSubmit={submit} aria-busy={busy} initial={false} whileInView={reduce?{}:{opacity:[0,1],y:[18,0]}} viewport={{once:true,amount:.3}} transition={{duration:.9,delay:.18,ease:sectionEase}}>
+    <div className="letter-entry">
     <div className="letter-field">
      <label htmlFor="newsletter-email">Your email address</label>
      <input id="newsletter-email" type="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Enter your email address" required autoComplete="email" maxLength={254} aria-describedby="newsletter-privacy newsletter-status" />
     </div>
-    <div className="letter-action-row">
      <button className="letter-submit" type="submit" disabled={busy} aria-label="Subscribe to the Kritarra letter"><span>{busy?'Sending…':'Join the letter'}</span></button>
+    </div>
+    <div className="letter-action-row">
      <p className="privacy-copy" id="newsletter-privacy">By subscribing, you agree to receive emails from Kritarra. Read our <Link href="/policies/privacy/">privacy information</Link>. You may unsubscribe at any time.</p>
     </div>
     <p className="form-status" id="newsletter-status" role="status">{status}</p>
-   </form>
+   </motion.form>
   </section>
  );
 }
