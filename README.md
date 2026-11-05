@@ -58,7 +58,7 @@ At the measured 1440×1000 desktop viewport, the current track moves from (0, 0)
 
 ## Kritarra perspective
 
-The perspective section uses a two-column grid without an added background: the headline, short note and story link share the left column, while a tall monochrome portrait anchors the right. A smaller earring close-up crosses the gap below the copy. Mobile stacks the text above the layered photographs. Grid rows keep the copy clear of both images across screen sizes. The two portrait frames move gently in opposite directions as the section scrolls; the title reveals line by line and the photographs open through a one-time mask. Images stay at their original scale on hover. Reduced motion uses a still composition, and server-rendered content stays visible without JavaScript.
+The perspective section is a compact editorial collage without an added background: oversized type overlaps the monochrome portrait, while an inset close-up shows the circular green-stone earring. A short note and one story link sit below the composition. The overlap adapts to tablet and mobile without covering either jewel. The two portrait frames move gently in opposite directions as the section scrolls; the title reveals line by line and the photographs open through a one-time mask. Images stay at their original scale on hover. Reduced motion uses a still composition, and server-rendered content stays visible without JavaScript.
 
 
 ## Collection discovery
