@@ -157,22 +157,22 @@ html{scroll-padding-top:70px}
 .discovery-heading h2{font-size:clamp(56px,5.5vw,84px);line-height:1.02;letter-spacing:-1.7px}
 .discovery-heading h2 em{color:#806b57}
 .discovery-heading>p{font-size:11px;line-height:1.85;color:var(--taupe);padding-bottom:4px}
-.discovery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.discovery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
 .discovery-tile{min-width:0}
 .discovery-category-card{display:block;position:relative;height:clamp(400px,37vw,560px);overflow:hidden;color:var(--ivory)}
 .discovery-category-card .asset{position:absolute;inset:0;width:100%;height:100%;min-height:0}
-.discovery-category-card img{transition:transform 1s cubic-bezier(.22,1,.36,1)}
-.discovery-category-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.68) 100%);pointer-events:none}
+.discovery-media{position:absolute;inset:0}
+.discovery-category-card img{transform:none;transition:none}
+.discovery-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.68) 100%);pointer-events:none}
 
 .discovery-card-caption{position:absolute;left:25px;right:20px;bottom:26px;z-index:1}
 .discovery-card-caption h3{font-family:var(--serif);font-size:clamp(34px,3.2vw,50px);font-weight:400;line-height:1.05;letter-spacing:-.6px;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .discovery-card-action{display:block;width:fit-content;font-size:11px;line-height:1.8;letter-spacing:1.2px;margin-top:14px;padding-bottom:6px;border-bottom:1px solid #f8f6f18c;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .5s cubic-bezier(.22,1,.36,1)}
-.discovery-category-card:hover img,.discovery-category-card:focus-visible img{transform:scale(1.035)}
 .discovery-category-card:hover .discovery-card-action,.discovery-category-card:focus-visible .discovery-card-action{opacity:1;transform:translateY(0)}
 .discovery-category-card:focus-visible{outline:2px solid var(--ivory);outline-offset:-6px}
-@media(min-width:768px) and (max-width:1099px){.discovery{padding-top:35px;padding-bottom:50px}.discovery-heading{margin-bottom:30px;gap:25px}.discovery-heading h2{font-size:59px}.discovery-heading>p{font-size:11px;max-width:175px}.discovery-grid{gap:8px}.discovery-category-card{height:clamp(320px,39vw,430px)}.discovery-card-caption{left:17px;right:12px;bottom:21px}.discovery-card-caption h3{font-size:clamp(28px,3.2vw,36px)}.discovery-card-action{font-size:11px;letter-spacing:.8px}}
-@media(max-width:767px){.discovery{padding-top:30px;padding-bottom:50px}.discovery-heading{display:block;margin-bottom:29px}.discovery-heading .eyebrow{font-size:11px;letter-spacing:1.3px;margin-bottom:19px}.discovery-heading h2{font-size:clamp(48px,12.8vw,72px);letter-spacing:-1.2px}.discovery-heading h2 em{display:block}.discovery-heading>p{font-size:11px;line-height:1.8;margin-top:17px;padding:0}.discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.discovery-category-card{height:clamp(230px,60vw,360px)}.discovery-card-caption{left:16px;right:12px;bottom:18px}.discovery-card-caption h3{font-size:clamp(28px,8vw,42px);letter-spacing:-.4px}.discovery-card-action{display:none}}
-@media(prefers-reduced-motion:reduce){.perspective-link::after,.discovery-category-card img,.discovery-card-caption h3,.discovery-card-action{transition:none}}
+@media(min-width:768px) and (max-width:1099px){.discovery{padding-top:35px;padding-bottom:50px}.discovery-heading{margin-bottom:30px;gap:25px}.discovery-heading h2{font-size:59px}.discovery-heading>p{font-size:11px;max-width:175px}.discovery-grid{gap:4px}.discovery-category-card{height:clamp(320px,39vw,430px)}.discovery-card-caption{left:17px;right:12px;bottom:21px}.discovery-card-caption h3{font-size:clamp(28px,3.2vw,36px)}.discovery-card-action{font-size:11px;letter-spacing:.8px}}
+@media(max-width:767px){.discovery{padding-top:30px;padding-bottom:50px}.discovery-heading{display:block;margin-bottom:29px}.discovery-heading .eyebrow{font-size:11px;letter-spacing:1.3px;margin-bottom:19px}.discovery-heading h2{font-size:clamp(48px,12.8vw,72px);letter-spacing:-1.2px}.discovery-heading h2 em{display:block}.discovery-heading>p{font-size:11px;line-height:1.8;margin-top:17px;padding:0}.discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.discovery-category-card{height:clamp(230px,60vw,360px)}.discovery-card-caption{left:16px;right:12px;bottom:18px}.discovery-card-caption h3{font-size:clamp(28px,8vw,42px);letter-spacing:-.4px}.discovery-card-action{display:none}}
+@media(prefers-reduced-motion:reduce){.perspective-link::after,.discovery-category-card img,.discovery-card-caption h3,.discovery-card-action{transition:none}.discovery-media{clip-path:none!important}.discovery-card-caption{transform:none!important;opacity:1!important}}
 
 /* Visual journal: two overlapping capsule portraits, with a single short note. */
 .visual-journal{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(50px,8vw,120px);padding:105px var(--gutter) 115px}

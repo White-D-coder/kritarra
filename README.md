@@ -63,7 +63,7 @@ The perspective section is a compact editorial collage without an added backgrou
 
 ## Collection discovery
 
-Discovery displays all four collection photographs together in a full-width strip, with category titles over the images. Each image links directly to its collection. Mobile uses a compact two-by-two gallery. Subtle image and underline hover transitions also respond to keyboard focus and respect reduced motion. User-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images remain in use, with provenance in assets/campaign/sources.json.
+Discovery displays all four collection photographs together in a full-width strip, with category titles over the images. Each image links directly to its collection. Mobile uses a compact two-by-two gallery. Cards have 4px gaps on desktop, tablet and mobile. The photographs reveal in a staggered wipe, followed by the titles; images do not zoom on hover. Keyboard focus and link feedback remain available, reduced motion is static, and the images and titles remain visible without JavaScript. User-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images remain in use, with provenance in assets/campaign/sources.json.
 
 
 ## Visual journal
