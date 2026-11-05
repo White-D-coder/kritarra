@@ -99,4 +99,4 @@ Supporting text uses sentence case, restrained tracking and 12px labels. Short h
 
 ## Animated statement and detail story
 
-The opening statement uses offset lines above the supplied 40% texture. The texture and second line drift gently with scrolling. The detail story places the copy on the left and the photograph on the right, without a coloured panel; a one-time image mask and a small vertical photo drift supply motion. Entry masks keep server-rendered text visible, reduced motion stays static, and none of these three sections zooms images on hover.
+The opening statement uses offset lines above the supplied 40% texture. The texture and second line drift gently with scrolling. The detail story is a single photographic composition: light typography overlays a dark fade, with the emerald earring kept clear of the text. Mobile uses a portrait crop with the copy toward the lower edge. A one-time image mask and a small vertical photo drift supply motion. Entry masks keep server-rendered text visible, reduced motion stays static, and none of these three sections zooms images on hover.

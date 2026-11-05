@@ -355,19 +355,20 @@ p{letter-spacing:.008em}
 .statement-second{display:block;margin-top:9px;margin-left:9vw}
 .statement-editorial p{justify-self:end;max-width:320px;margin:34px 3vw 0 0;text-align:left}
 
-/* A compact, image-led craft story with its own rhythm and no coloured panel. */
-.craft-story.craft-editorial{display:grid;grid-template-columns:.9fr 1.2fr;gap:6vw;height:auto;min-height:0;padding:40px var(--gutter) 65px;background:transparent;color:var(--ink)}
-.craft-editorial .craft-copy{grid-column:1;grid-row:1;align-self:center;min-width:0;padding:25px 0}
-.craft-editorial .craft-copy .eyebrow{color:var(--taupe);margin-bottom:28px}
-.craft-editorial .craft-copy h2{font-size:clamp(56px,5.5vw,84px);line-height:1.04;letter-spacing:-.03em}
-.craft-title-tail{display:block;font-size:.88em}
-.craft-editorial .craft-copy h2 em{color:#806b57}
-.craft-editorial .craft-copy p{max-width:280px;margin:25px 0 13px;color:var(--taupe)}
-.craft-editorial .craft-visual{position:relative;grid-column:2;grid-row:1;height:clamp(400px,37vw,530px);min-height:0;overflow:hidden}
+/* The craft story is a photographic composition with light type over its shade. */
+.craft-story.craft-editorial{position:relative;isolation:isolate;display:block;height:auto;min-height:0;margin:35px var(--gutter) 65px;padding:0;background:#1c1714;color:var(--ivory);overflow:hidden}
+.craft-story.craft-editorial::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#1c1714 0%,rgba(28,23,20,.98) 23%,rgba(28,23,20,.8) 36%,rgba(28,23,20,.12) 55%,transparent 75%);pointer-events:none}
+.craft-editorial .craft-copy{position:relative;z-index:2;width:58%;max-width:720px;min-height:clamp(460px,38vw,550px);padding:46px 5vw 42px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.craft-editorial .craft-copy .eyebrow{color:#f8f6f1c9;margin-bottom:26px}
+.craft-editorial .craft-copy h2{font-size:clamp(60px,6.2vw,94px);line-height:1.02;letter-spacing:-.035em}
+.craft-title-tail{display:block;font-size:.87em}
+.craft-editorial .craft-copy h2 em{color:#d4c2a7;white-space:nowrap}
+.craft-editorial .craft-copy p{max-width:300px;margin:24px 0 13px;color:#f8f6f1d9}
+.craft-editorial .craft-visual{position:absolute;inset:0 0 0 22%;height:100%;width:78%;min-height:0;z-index:0;overflow:hidden}
 .craft-photograph{position:absolute;inset:-22px 0;height:calc(100% + 44px)}
 .craft-editorial .asset{height:100%;min-height:0;background:transparent}
 .craft-editorial .asset img{transform:none;transition:none}
-.craft-editorial .craft-copy .text-link{color:var(--ink)}
-@media(min-width:768px) and (max-width:1099px){.craft-story.craft-editorial{grid-template-columns:1fr 1.15fr;gap:5vw}.craft-editorial .craft-copy h2{font-size:clamp(48px,5.5vw,62px)}.craft-editorial .craft-visual{height:430px}}
-@media(max-width:767px){.intro-statement.statement-editorial{padding:55px var(--gutter) 50px}.statement-editorial .eyebrow{margin-bottom:26px}.statement-editorial h2{font-size:clamp(36px,9.3vw,58px);line-height:1.12}.statement-second{margin:10px 0 0;transform:none!important}.statement-editorial p{justify-self:start;margin:26px 0 0;max-width:310px}.craft-story.craft-editorial{grid-template-columns:1fr;gap:28px;padding:30px var(--gutter) 50px}.craft-editorial .craft-copy{grid-column:1;grid-row:1;padding:0}.craft-editorial .craft-copy .eyebrow{margin-bottom:20px}.craft-editorial .craft-copy h2{font-size:clamp(52px,13.5vw,76px)}.craft-editorial .craft-copy p{max-width:340px;margin:20px 0 10px}.craft-editorial .craft-visual{grid-column:1;grid-row:2;height:clamp(300px,86vw,440px)}}
+.craft-editorial .craft-copy .text-link{color:var(--ivory)}
+@media(min-width:768px) and (max-width:1099px){.craft-editorial .craft-copy{width:62%;min-height:470px;padding:38px 4vw}.craft-editorial .craft-copy h2{font-size:clamp(55px,6.2vw,68px)}.craft-editorial .craft-visual{left:18%;width:82%}}
+@media(max-width:767px){.intro-statement.statement-editorial{padding:55px var(--gutter) 50px}.statement-editorial .eyebrow{margin-bottom:26px}.statement-editorial h2{font-size:clamp(36px,9.3vw,58px);line-height:1.12}.statement-second{margin:10px 0 0;transform:none!important}.statement-editorial p{justify-self:start;margin:26px 0 0;max-width:310px}.craft-story.craft-editorial{margin:25px var(--gutter) 50px}.craft-story.craft-editorial::after{background:linear-gradient(180deg,rgba(17,14,12,.04) 15%,rgba(17,14,12,.12) 31%,rgba(17,14,12,.84) 59%,#110e0c 100%)}.craft-editorial .craft-copy{width:100%;max-width:none;min-height:590px;padding:285px 24px 30px;justify-content:flex-end}.craft-editorial .craft-copy .eyebrow{margin-bottom:18px}.craft-editorial .craft-copy h2{font-size:clamp(46px,12vw,66px)}.craft-editorial .craft-copy p{max-width:300px;margin:18px 0 10px}.craft-editorial .craft-visual{inset:0;width:100%;height:100%}.craft-editorial .craft-visual .asset img{object-position:52% 18%!important}}
 @media(prefers-reduced-motion:reduce){.motion-line-content,.statement-second,.intro-statement-texture,.craft-photograph,.craft-description,.statement-editorial p{transform:none!important}.craft-description,.statement-editorial p{opacity:1!important}.craft-editorial .craft-visual{clip-path:none!important}}
