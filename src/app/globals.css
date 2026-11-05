@@ -127,27 +127,27 @@ html{scroll-padding-top:70px}
   .kritarra-editorial:not([data-editorial-motion=diagonal]) .kritarra-editorial-track{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* Perspective: an editorial masthead over a wide portrait and floating study. */
-.perspective{padding:55px var(--gutter) 85px;background:transparent}
-.perspective-stage{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;align-items:start}
-.perspective-heading{position:relative;grid-column:1 / -1;grid-row:1;z-index:3;min-width:0;margin-bottom:30px}
-.perspective-heading .eyebrow{margin-bottom:23px}
-.perspective-heading h2{display:flex;align-items:baseline;gap:.2em;font-size:clamp(78px,9.5vw,154px);line-height:1;letter-spacing:-.04em}
+/* Perspective: a composed two-column story with a layered jewellery study. */
+.perspective{padding:55px var(--gutter) 75px;background:transparent}
+.perspective-stage{position:relative;display:grid;grid-template-columns:.95fr 1.1fr;column-gap:6vw;row-gap:42px;align-items:stretch}
+.perspective-heading{position:relative;grid-column:1;grid-row:1;z-index:3;padding-top:32px;min-width:0}
+.perspective-heading .eyebrow{margin-bottom:25px}
+.perspective-heading h2{font-size:clamp(74px,7.7vw,124px);line-height:1.02;letter-spacing:-.035em}
 .perspective-heading h2 em{display:block;white-space:nowrap;font-weight:400}
 .perspective-title-line{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
-.perspective-title-line>span,.perspective-title-line>em{display:block;white-space:nowrap}
+.perspective-title-line>span,.perspective-title-line>em{display:block}
 .perspective-image-reveal{width:100%;height:100%}
 .perspective .asset img{transform:none;transition:none}
-.perspective-portrait{position:relative;grid-column:3 / -1;grid-row:2;height:clamp(440px,43vw,670px);width:100%;z-index:1}
+.perspective-portrait{position:relative;grid-column:2;grid-row:1 / 3;min-height:clamp(580px,48vw,760px);height:100%;width:100%;z-index:1}
 .perspective-portrait .asset,.perspective-detail .asset{width:100%;height:100%;background:transparent}
-.perspective-detail{position:relative;grid-column:1 / 5;grid-row:2;align-self:end;width:88%;aspect-ratio:.9;margin-bottom:-48px;z-index:2;outline:7px solid var(--ivory)}
-.perspective-note{grid-column:6 / -1;grid-row:3;display:flex;justify-content:space-between;align-items:flex-start;gap:35px;margin-top:27px}
-.perspective-note p{max-width:315px;color:var(--taupe);text-wrap:pretty}
-.perspective-link{display:inline-flex;position:relative;flex:none;align-items:center;min-height:44px;padding:7px 0}
+.perspective-detail{position:relative;grid-column:1;grid-row:2;justify-self:end;align-self:end;width:92%;max-width:470px;aspect-ratio:1.5;margin-right:-9vw;z-index:2;border:6px solid var(--ivory)}
+.perspective-note{display:block;margin-top:27px;max-width:300px}
+.perspective-note p{color:var(--taupe);text-wrap:pretty}
+.perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;padding:7px 0;margin-top:14px}
 .perspective-link::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .perspective-link:hover::after,.perspective-link:focus-visible::after{transform:scaleX(1)}
-@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:45px;padding-bottom:75px}.perspective-stage{column-gap:14px}.perspective-heading{margin-bottom:27px}.perspective-heading h2{font-size:clamp(68px,9.5vw,108px)}.perspective-portrait{height:clamp(390px,48vw,520px)}.perspective-detail{width:94%;margin-bottom:-36px;outline-width:6px}.perspective-note{grid-column:6 / -1;gap:24px;margin-top:25px}.perspective-note p{max-width:250px}}
-@media(max-width:767px){.perspective{padding:35px var(--gutter) 60px}.perspective-stage{column-gap:8px}.perspective-heading{margin-bottom:28px}.perspective-heading .eyebrow{margin-bottom:20px}.perspective-heading h2{display:block;font-size:clamp(52px,14.2vw,94px);line-height:1.02;letter-spacing:-.025em}.perspective-portrait{grid-column:3 / -1;height:auto;aspect-ratio:.87}.perspective-detail{grid-column:1 / 6;width:100%;aspect-ratio:.8;margin-bottom:-36px;outline-width:5px}.perspective-note{grid-column:1 / -1;display:block;margin-top:63px}.perspective-note p{max-width:330px}.perspective-link{margin-top:12px}}
+@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:45px;padding-bottom:60px}.perspective-stage{column-gap:5vw;row-gap:34px}.perspective-heading{padding-top:20px}.perspective-heading h2{font-size:clamp(52px,7.6vw,84px)}.perspective-heading .eyebrow{margin-bottom:22px}.perspective-note{margin-top:24px;max-width:280px}.perspective-portrait{min-height:560px}.perspective-detail{width:96%;margin-right:-8vw;aspect-ratio:1.25}}
+@media(max-width:767px){.perspective{padding:35px var(--gutter) 75px}.perspective-stage{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:0;row-gap:30px}.perspective-heading{grid-column:1 / -1;grid-row:1;padding-top:0}.perspective-heading .eyebrow{margin-bottom:20px}.perspective-heading h2{font-size:clamp(52px,14.2vw,94px);line-height:1.02;letter-spacing:-.025em}.perspective-note{margin-top:20px;max-width:340px}.perspective-link{margin-top:10px}.perspective-portrait{grid-column:1 / -1;grid-row:2;justify-self:end;width:82%;height:auto;min-height:0;aspect-ratio:.78}.perspective-detail{grid-column:1 / -1;grid-row:2;justify-self:start;width:46%;max-width:none;aspect-ratio:.92;margin:0 0 -25px;border-width:5px}}
 @media(prefers-reduced-motion:reduce){.perspective-portrait,.perspective-detail,.perspective-title-line>span,.perspective-title-line>em{transform:none!important}.perspective-image-reveal{clip-path:none!important}}
 
 /* Four photographic doorways into the collection, all visible together. */
