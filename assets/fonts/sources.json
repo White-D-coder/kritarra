@@ -1,14 +1,6 @@
 [
   {
     "family": "EB Garamond",
-    "style": "italic",
-    "weight": "400 500",
-    "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2",
-    "output": "/fonts/eb-garamond-italic-latin.woff2",
-    "sha256": "d2761541b314509e02df3539cd35fc712954a48a50f4e0ab424dde817c699c2a"
-  },
-  {
-    "family": "EB Garamond",
     "style": "normal",
     "weight": "400 500",
     "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2",
