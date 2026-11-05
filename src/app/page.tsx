@@ -13,7 +13,7 @@ import {CraftStory} from '@/components/craft-story';
 import {KritarraEditorialSlider} from '@/components/KritarraEditorialSlider';
 import {signatureEditorialSlides} from '@/lib/signature-editorial';
 import {socialCampaigns} from '@/lib/imagery';
-export default function Home(){return <main id="main">
+export default function Home(){return <main id="main" className="home-main">
  <BrandIntro/>
  <Hero/>
  <BrandStatement/>
