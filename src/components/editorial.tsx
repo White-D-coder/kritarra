@@ -1,5 +1,6 @@
 'use client';
-import { motion, useReducedMotion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import Link from 'next/link';
 import { campaign, type CampaignPhoto } from '@/lib/imagery';
 export function Reveal({children,className='',delay=0}:{children:React.ReactNode;className?:string;delay?:number}) {
@@ -11,19 +12,40 @@ export function Asset({label='Campaign photograph',className='',number='01',src,
 }
 export function TextLink({href,children,light=false}:{href:string;children:React.ReactNode;light?:boolean}){return <Link href={href} className={`text-link ${light?'light':''}`}>{children}<span aria-hidden="true">↗</span></Link>;}
 export function Perspective() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [reduce, setReduce] = useState(true);
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setReduce(preference.matches);
+    update();
+    preference.addEventListener('change', update);
+    return () => preference.removeEventListener('change', update);
+  }, []);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] });
+  const portraitY = useTransform(scrollYProgress, [0, 1], ['5%', '-5%']);
+  const detailY = useTransform(scrollYProgress, [0, 1], ['-7%', '7%']);
+  const ease = [.22, 1, .36, 1] as const;
+
   return (
-    <section className="perspective" id="our-craft" aria-labelledby="perspective-heading">
+    <section ref={sectionRef} className="perspective" id="our-craft" aria-labelledby="perspective-heading" data-perspective-motion={reduce ? 'static' : 'scroll'}>
       <div className="perspective-stage">
         <div className="perspective-heading">
           <span className="eyebrow">The Kritarra perspective</span>
-          <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
+          <h2 id="perspective-heading">
+            <span className="perspective-title-line"><motion.span initial={false} whileInView={reduce ? {} : { y: ['105%', '0%'] }} viewport={{ once: true, amount: .6 }} transition={{ duration: 1.15, ease }}>An art.</motion.span></span>{' '}
+            <span className="perspective-title-line"><motion.em initial={false} whileInView={reduce ? {} : { y: ['105%', '0%'] }} viewport={{ once: true, amount: .6 }} transition={{ duration: 1.15, delay: .14, ease }}>An intention.</motion.em></span>
+          </h2>
         </div>
-        <Reveal className="perspective-portrait">
-          <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="(max-width: 767px) 82vw, 60vw" />
-        </Reveal>
-        <Reveal className="perspective-detail" delay={0.1}>
-          <Asset photo={campaign.DdgV82YseoM} position="45% 25%" sizes="(max-width: 767px) 44vw, 34vw" />
-        </Reveal>
+        <motion.div className="perspective-portrait" style={{ y: reduce ? 0 : portraitY }}>
+          <motion.div className="perspective-image-reveal" initial={false} whileInView={reduce ? {} : { clipPath: ['inset(14% 0 0 0)', 'inset(0% 0 0 0)'] }} viewport={{ once: true, amount: .2 }} transition={{ duration: 1.3, ease }}>
+            <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="(max-width: 767px) 82vw, 60vw" />
+          </motion.div>
+        </motion.div>
+        <motion.div className="perspective-detail" style={{ y: reduce ? 0 : detailY }}>
+          <motion.div className="perspective-image-reveal" initial={false} whileInView={reduce ? {} : { clipPath: ['inset(0 100% 0 0)', 'inset(0 0% 0 0)'] }} viewport={{ once: true, amount: .2 }} transition={{ duration: 1.2, delay: .16, ease }}>
+            <Asset photo={campaign.DdgV82YseoM} position="45% 25%" sizes="(max-width: 767px) 44vw, 34vw" />
+          </motion.div>
+        </motion.div>
       </div>
       <div className="perspective-note">
         <p>A personal approach to diamonds, gemstones and bespoke jewellery.</p>

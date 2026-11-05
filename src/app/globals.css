@@ -134,6 +134,11 @@ html{scroll-padding-top:70px}
 .perspective-heading .eyebrow{font-size:11px;letter-spacing:1.6px;line-height:1.8;margin-bottom:21px}
 .perspective-heading h2{font-size:clamp(100px,10.8vw,174px);line-height:.87;letter-spacing:-4.5px}
 .perspective-heading h2 em{display:block;white-space:nowrap;font-weight:400}
+.perspective-title-line{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.perspective-title-line>span,.perspective-title-line>em{display:block}
+.perspective-image-reveal{width:100%;height:100%}
+.perspective .asset img{transform:none;transition:none}
+@media(prefers-reduced-motion:reduce){.perspective-portrait,.perspective-detail,.perspective-title-line>span,.perspective-title-line>em{transform:none!important}.perspective-image-reveal{clip-path:none!important}}
 .perspective-portrait{position:absolute;top:0;right:0;width:62%;height:100%;z-index:1}
 .perspective-portrait .asset,.perspective-detail .asset{width:100%;height:100%;background:transparent}
 .perspective-detail{position:absolute;left:9%;bottom:0;width:35%;height:46%;z-index:2;border:8px solid var(--ivory)}
