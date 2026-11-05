@@ -63,7 +63,7 @@ The perspective section is a compact editorial collage without an added backgrou
 
 ## Collection discovery
 
-Discovery displays all four collection photographs together in a full-width strip, with category titles over the images. Each image links directly to its collection. Mobile uses a compact two-by-two gallery. Cards have 4px gaps on desktop, tablet and mobile. The photographs reveal in a staggered wipe, followed by the titles; images do not zoom on hover. Keyboard focus and link feedback remain available, reduced motion is static, and the images and titles remain visible without JavaScript. User-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images remain in use, with provenance in assets/campaign/sources.json.
+Discovery displays all four collection photographs together in a full-width strip, with category titles over the images. Each image links directly to its collection. Mobile uses a compact two-by-two gallery. Cards touch with zero gaps on desktop, tablet and mobile. The photographs reveal in a staggered wipe, followed by the titles; images do not zoom on hover. Keyboard focus and link feedback remain available, reduced motion is static, and the images and titles remain visible without JavaScript. User-supplied ring (Dc-ogQ-vgSm) and bracelet (DLK5DXfNPGi) images remain in use, with provenance in assets/campaign/sources.json.
 
 
 ## Visual journal
@@ -78,7 +78,7 @@ The “Designed to be remembered” statement uses locally hosted Full HD emeral
 
 ## Considered selection
 
-“Yours to discover” is a staggered four-image gallery: a tall opening ring photograph, followed by necklace, earring and bracelet cards with varied proportions and vertical offsets. Mobile presents all four categories in two columns. Each card reveals once on entry and gently shifts with scrolling; images stay at their original scale on hover. Reduced motion is static and the gallery remains visible without JavaScript. Existing product links, accessible wishlist controls and persistence are reused. The category-preview note and details-on-request labels remain; no individual SKUs or prices are invented.
+“Yours to discover” uses a large photograph beside four category controls. Selecting a category changes the photograph and exploration link with a short crossfade and translation; images stay at their original scale. The selected category can be saved with the existing persistent wishlist. Mobile stacks the image above a two-column selector. Native keyboard buttons, a selected-state announcement and a no-JavaScript set of category links are included. Details remain on request, with no invented products or prices.
 
 
 ## The Kritarra letter
@@ -99,4 +99,4 @@ Supporting text uses sentence case, restrained tracking and 12px labels. Short h
 
 ## Animated statement and detail story
 
-The opening statement uses offset lines above the supplied 40% texture. The texture and second line drift gently with scrolling. The detail story is a single photographic composition: light typography overlays a dark fade, with the emerald earring kept clear of the text. Mobile uses a portrait crop with the copy toward the lower edge. A one-time image mask and a small vertical photo drift supply motion. Entry masks keep server-rendered text visible, reduced motion stays static, and none of these three sections zooms images on hover.
+The opening statement uses offset lines above the supplied 40% texture. The texture and second line drift gently with scrolling. The detail story spans the full viewport width as a single photographic composition: light typography overlays a dark fade, with the emerald earring kept clear of the text. Mobile uses a portrait crop with the copy toward the lower edge. A one-time image mask and a small vertical photo drift supply motion. Entry masks keep server-rendered text visible, reduced motion stays static, and none of these three sections zooms images on hover.

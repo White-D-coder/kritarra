@@ -157,7 +157,7 @@ html{scroll-padding-top:70px}
 .discovery-heading h2{font-size:clamp(56px,5.5vw,84px);line-height:1.02;letter-spacing:-1.7px}
 .discovery-heading h2 em{color:#806b57}
 .discovery-heading>p{font-size:11px;line-height:1.85;color:var(--taupe);padding-bottom:4px}
-.discovery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.discovery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
 .discovery-tile{min-width:0}
 .discovery-category-card{display:block;position:relative;height:clamp(400px,37vw,560px);overflow:hidden;color:var(--ivory)}
 .discovery-category-card .asset{position:absolute;inset:0;width:100%;height:100%;min-height:0}
@@ -170,8 +170,8 @@ html{scroll-padding-top:70px}
 .discovery-card-action{display:block;width:fit-content;font-size:11px;line-height:1.8;letter-spacing:1.2px;margin-top:14px;padding-bottom:6px;border-bottom:1px solid #f8f6f18c;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .5s cubic-bezier(.22,1,.36,1)}
 .discovery-category-card:hover .discovery-card-action,.discovery-category-card:focus-visible .discovery-card-action{opacity:1;transform:translateY(0)}
 .discovery-category-card:focus-visible{outline:2px solid var(--ivory);outline-offset:-6px}
-@media(min-width:768px) and (max-width:1099px){.discovery{padding-top:35px;padding-bottom:50px}.discovery-heading{margin-bottom:30px;gap:25px}.discovery-heading h2{font-size:59px}.discovery-heading>p{font-size:11px;max-width:175px}.discovery-grid{gap:4px}.discovery-category-card{height:clamp(320px,39vw,430px)}.discovery-card-caption{left:17px;right:12px;bottom:21px}.discovery-card-caption h3{font-size:clamp(28px,3.2vw,36px)}.discovery-card-action{font-size:11px;letter-spacing:.8px}}
-@media(max-width:767px){.discovery{padding-top:30px;padding-bottom:50px}.discovery-heading{display:block;margin-bottom:29px}.discovery-heading .eyebrow{font-size:11px;letter-spacing:1.3px;margin-bottom:19px}.discovery-heading h2{font-size:clamp(48px,12.8vw,72px);letter-spacing:-1.2px}.discovery-heading h2 em{display:block}.discovery-heading>p{font-size:11px;line-height:1.8;margin-top:17px;padding:0}.discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.discovery-category-card{height:clamp(230px,60vw,360px)}.discovery-card-caption{left:16px;right:12px;bottom:18px}.discovery-card-caption h3{font-size:clamp(28px,8vw,42px);letter-spacing:-.4px}.discovery-card-action{display:none}}
+@media(min-width:768px) and (max-width:1099px){.discovery{padding-top:35px;padding-bottom:50px}.discovery-heading{margin-bottom:30px;gap:25px}.discovery-heading h2{font-size:59px}.discovery-heading>p{font-size:11px;max-width:175px}.discovery-grid{gap:0}.discovery-category-card{height:clamp(320px,39vw,430px)}.discovery-card-caption{left:17px;right:12px;bottom:21px}.discovery-card-caption h3{font-size:clamp(28px,3.2vw,36px)}.discovery-card-action{font-size:11px;letter-spacing:.8px}}
+@media(max-width:767px){.discovery{padding-top:30px;padding-bottom:50px}.discovery-heading{display:block;margin-bottom:29px}.discovery-heading .eyebrow{font-size:11px;letter-spacing:1.3px;margin-bottom:19px}.discovery-heading h2{font-size:clamp(48px,12.8vw,72px);letter-spacing:-1.2px}.discovery-heading h2 em{display:block}.discovery-heading>p{font-size:11px;line-height:1.8;margin-top:17px;padding:0}.discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}.discovery-category-card{height:clamp(230px,60vw,360px)}.discovery-card-caption{left:16px;right:12px;bottom:18px}.discovery-card-caption h3{font-size:clamp(28px,8vw,42px);letter-spacing:-.4px}.discovery-card-action{display:none}}
 @media(prefers-reduced-motion:reduce){.perspective-link::after,.discovery-category-card img,.discovery-card-caption h3,.discovery-card-action{transition:none}.discovery-media{clip-path:none!important}.discovery-card-caption{transform:none!important;opacity:1!important}}
 
 /* Visual journal: two overlapping capsule portraits, with a single short note. */
@@ -224,41 +224,35 @@ html{scroll-padding-top:70px}
 @media(min-width:601px) and (max-width:1099px){.craft-story{height:450px}.craft-copy{padding:32px 4.5vw}.craft-copy h2{font-size:50px}.craft-copy .eyebrow{margin-bottom:18px}.craft-copy p{margin:17px 0 11px}.craft-note{margin-top:22px}}
 @media(max-width:600px){.craft-story{height:auto}.craft-visual{height:300px}.craft-copy{padding:34px 26px;min-height:0}.craft-copy .eyebrow{margin-bottom:18px}.craft-copy h2{font-size:clamp(46px,12vw,58px)}.craft-copy p{margin:18px 0 12px}.craft-note{margin-top:20px;font-size:11px;line-height:1.8}}
 
-/* Four discoveries, composed as a staggered photographic gallery. */
-.curated-selection{padding:65px var(--gutter) 80px}
-.curated-selection-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
-.curated-selection-heading .eyebrow{margin-bottom:24px}
+/* A focused collection viewer with a large photograph and category choices. */
+.curated-selection{padding:40px var(--gutter)}
+.curated-selection-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:34px}
+.curated-selection-heading .eyebrow{margin-bottom:22px}
 .curated-selection-heading h2{font-size:clamp(62px,6.8vw,104px);line-height:1.04;letter-spacing:-.035em}
 .curated-selection-heading h2 em{color:#806b57;white-space:nowrap}
 .curated-all-link{position:relative;display:inline-flex;align-items:center;min-height:44px;flex:none;margin-bottom:8px}
 .curated-all-link::after{content:'';position:absolute;inset:auto 0 4px;height:1px;background:currentColor;transform:scaleX(.3);transform-origin:left;transition:transform .45s cubic-bezier(.22,1,.36,1)}
 .curated-all-link:hover::after,.curated-all-link:focus-visible::after{transform:scaleX(1)}
-.selection-grid{display:grid;grid-template-columns:1.3fr repeat(3,minmax(0,1fr));align-items:start;gap:26px}
-.selection-item{min-width:0}
-.selection-item--necklaces{margin-top:clamp(45px,6.5vw,100px)}
-.selection-item--earrings{margin-top:clamp(20px,2.8vw,45px)}
-.selection-item--bracelets{margin-top:clamp(70px,10vw,145px)}
-.curated-selection .product-card{display:block}
-.curated-selection .product-image{position:relative;height:auto;aspect-ratio:.73;min-height:0;overflow:hidden}
-.curated-selection .selection-item--necklaces .product-image{aspect-ratio:.83}
-.curated-selection .selection-item--earrings .product-image{aspect-ratio:.72}
-.curated-selection .selection-item--bracelets .product-image{aspect-ratio:.9}
-.curated-selection .product-image>a:first-child{position:absolute;inset:0}
-.curated-selection .product-image .asset{height:100%;min-height:0;background:transparent}
-.curated-selection .product-image .asset img{position:absolute;inset:0;transition:none}
-.curated-selection .product-image>a:first-child:hover img,.curated-selection .product-image>a:first-child:focus-visible img{transform:none}
-.curated-selection .product-image .wish-button{top:12px;right:12px;width:40px;min-height:40px;padding:10px;border-radius:50%;background:#f8f6f1e6;color:var(--ink)}
-.curated-selection .product-image .wish-button.saved{color:#8b543d}
-.curated-selection .product-image .wish-button svg{width:17px;height:17px}
-.curated-selection .product-discover,.curated-selection .product-meta .tiny{display:none}
-.curated-selection .product-meta{display:block;padding-top:18px}
-.curated-selection .product-meta h3{font-size:clamp(26px,2.5vw,38px);line-height:1.08;margin:0;letter-spacing:-.025em}
-.curated-selection .product-price{display:block;font-size:12px;line-height:1.7;margin-top:7px;color:var(--taupe)}
-.selection-footnote{margin-top:37px}
-.selection-footnote p{color:var(--taupe);line-height:1.8}
-@media(min-width:768px) and (max-width:1099px){.curated-selection{padding-top:45px;padding-bottom:60px}.curated-selection-heading{gap:25px;margin-bottom:42px}.curated-selection-heading h2{font-size:clamp(54px,6.8vw,74px)}.selection-grid{gap:16px}.curated-selection .product-meta h3{font-size:25px}.curated-selection .product-image .wish-button{top:8px;right:8px;width:36px;min-height:36px;padding:9px}}
-@media(max-width:767px){.curated-selection{padding:40px var(--gutter) 55px}.curated-selection-heading{display:block;margin-bottom:36px}.curated-selection-heading .eyebrow{margin-bottom:20px}.curated-selection-heading h2{font-size:clamp(52px,13.7vw,78px);line-height:1.03}.curated-selection-heading h2 em{display:block}.curated-all-link{margin:15px 0 0}.selection-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;row-gap:34px}.selection-item--necklaces{margin-top:48px}.selection-item--earrings{margin-top:0}.selection-item--bracelets{margin-top:52px}.curated-selection .selection-item--necklaces .product-image{aspect-ratio:.88}.curated-selection .selection-item--earrings .product-image{aspect-ratio:.85}.curated-selection .selection-item--bracelets .product-image{aspect-ratio:.73}.curated-selection .product-meta{padding-top:14px}.curated-selection .product-meta h3{font-size:clamp(25px,6.8vw,34px)}.curated-selection .product-image .wish-button{top:8px;right:8px;width:36px;min-height:36px;padding:9px}.selection-footnote{margin-top:30px;max-width:330px}}
-@media(prefers-reduced-motion:reduce){.curated-all-link::after{transition:none}.selection-item{transform:none!important}.selection-card-reveal{clip-path:none!important;opacity:1!important}}
+.selection-viewer{display:grid;grid-template-columns:1.12fr 1fr;height:clamp(480px,42vw,620px)}
+.selection-preview{position:relative;min-width:0;min-height:0;overflow:hidden;background:#eae4dc}
+.selection-image-link{display:block;position:absolute;inset:0}
+.selection-photograph{position:absolute;inset:0}
+.selection-preview .asset{width:100%;height:100%;min-height:0;background:transparent}
+.selection-preview .asset img{transform:none;transition:none}
+.selection-preview .selection-save{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;display:flex;justify-content:center;align-items:center;border-radius:50%;background:#f8f6f1eb;color:var(--ink)}
+.selection-preview .selection-save.saved{color:#8b543d}
+.selection-menu{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:30px 0 30px 7vw}
+.selection-options,.selection-fallback{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.selection-option,.selection-fallback>a{position:relative;font-family:var(--serif);font-size:clamp(34px,3.6vw,54px);line-height:1.15;letter-spacing:-.025em;text-align:left;padding:7px 0;color:#95897b;transition:color .3s}
+.selection-option.is-active,.selection-option:hover,.selection-option:focus-visible,.selection-fallback>a{color:var(--ink)}
+.selection-option::after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.selection-option.is-active::after{transform:scaleX(1)}
+.selection-actions{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px 20px;margin-top:26px}
+.selection-actions p{font-size:12px;line-height:1.7;color:var(--taupe)}
+.selection-disclosure{max-width:320px;font-size:12px;line-height:1.8;margin-top:18px;color:var(--taupe)}
+@media(min-width:768px) and (max-width:1099px){.curated-selection-heading{gap:25px;margin-bottom:30px}.curated-selection-heading h2{font-size:clamp(54px,6.8vw,74px)}.selection-menu{padding-left:5vw}.selection-option{font-size:clamp(34px,3.6vw,40px)}}
+@media(max-width:767px){.curated-selection-heading{display:block;margin-bottom:28px}.curated-selection-heading .eyebrow{margin-bottom:20px}.curated-selection-heading h2{font-size:clamp(52px,13.7vw,78px);line-height:1.03}.curated-selection-heading h2 em{display:block}.curated-all-link{margin:13px 0 0}.selection-viewer{grid-template-columns:1fr;height:auto}.selection-preview{aspect-ratio:4/5}.selection-menu{padding:24px 0 0}.selection-options,.selection-fallback{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;align-items:start}.selection-option,.selection-fallback>a{width:fit-content;font-size:clamp(28px,7.6vw,38px);min-height:44px;padding:7px 0}.selection-actions{margin-top:20px}.selection-disclosure{margin-top:13px;max-width:330px}}
+@media(prefers-reduced-motion:reduce){.curated-all-link::after,.selection-option,.selection-option::after{transition:none}.selection-photograph{transform:none!important}}
 
 /* The letter: a centered invitation and one quiet row for subscribing. */
 .newsletter.newsletter-invitation{display:block;padding:80px var(--gutter) 85px;background:transparent;border:0;text-align:center}
@@ -356,7 +350,7 @@ p{letter-spacing:.008em}
 .statement-editorial p{justify-self:end;max-width:320px;margin:34px 3vw 0 0;text-align:left}
 
 /* The craft story is a photographic composition with light type over its shade. */
-.craft-story.craft-editorial{position:relative;isolation:isolate;display:block;height:auto;min-height:0;margin:35px var(--gutter) 65px;padding:0;background:#1c1714;color:var(--ivory);overflow:hidden}
+.craft-story.craft-editorial{position:relative;isolation:isolate;display:block;height:auto;min-height:0;margin:35px 0 65px;padding:0;background:#1c1714;color:var(--ivory);overflow:hidden}
 .craft-story.craft-editorial::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#1c1714 0%,rgba(28,23,20,.98) 23%,rgba(28,23,20,.8) 36%,rgba(28,23,20,.12) 55%,transparent 75%);pointer-events:none}
 .craft-editorial .craft-copy{position:relative;z-index:2;width:58%;max-width:720px;min-height:clamp(460px,38vw,550px);padding:46px 5vw 42px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .craft-editorial .craft-copy .eyebrow{color:#f8f6f1c9;margin-bottom:26px}
@@ -370,7 +364,7 @@ p{letter-spacing:.008em}
 .craft-editorial .asset img{transform:none;transition:none}
 .craft-editorial .craft-copy .text-link{color:var(--ivory)}
 @media(min-width:768px) and (max-width:1099px){.craft-editorial .craft-copy{width:62%;min-height:470px;padding:38px 4vw}.craft-editorial .craft-copy h2{font-size:clamp(55px,6.2vw,68px)}.craft-editorial .craft-visual{left:18%;width:82%}}
-@media(max-width:767px){.intro-statement.statement-editorial{padding:55px var(--gutter) 50px}.statement-editorial .eyebrow{margin-bottom:26px}.statement-editorial h2{font-size:clamp(36px,9.3vw,58px);line-height:1.12}.statement-second{margin:10px 0 0;transform:none!important}.statement-editorial p{justify-self:start;margin:26px 0 0;max-width:310px}.craft-story.craft-editorial{margin:25px var(--gutter) 50px}.craft-story.craft-editorial::after{background:linear-gradient(180deg,rgba(17,14,12,.04) 15%,rgba(17,14,12,.12) 31%,rgba(17,14,12,.84) 59%,#110e0c 100%)}.craft-editorial .craft-copy{width:100%;max-width:none;min-height:590px;padding:285px 24px 30px;justify-content:flex-end}.craft-editorial .craft-copy .eyebrow{margin-bottom:18px}.craft-editorial .craft-copy h2{font-size:clamp(46px,12vw,66px)}.craft-editorial .craft-copy p{max-width:300px;margin:18px 0 10px}.craft-editorial .craft-visual{inset:0;width:100%;height:100%}.craft-editorial .craft-visual .asset img{object-position:52% 18%!important}}
+@media(max-width:767px){.intro-statement.statement-editorial{padding:55px var(--gutter) 50px}.statement-editorial .eyebrow{margin-bottom:26px}.statement-editorial h2{font-size:clamp(36px,9.3vw,58px);line-height:1.12}.statement-second{margin:10px 0 0;transform:none!important}.statement-editorial p{justify-self:start;margin:26px 0 0;max-width:310px}.craft-story.craft-editorial{margin:25px 0 50px}.craft-story.craft-editorial::after{background:linear-gradient(180deg,rgba(17,14,12,.04) 15%,rgba(17,14,12,.12) 31%,rgba(17,14,12,.84) 59%,#110e0c 100%)}.craft-editorial .craft-copy{width:100%;max-width:none;min-height:590px;padding:285px 24px 30px;justify-content:flex-end}.craft-editorial .craft-copy .eyebrow{margin-bottom:18px}.craft-editorial .craft-copy h2{font-size:clamp(46px,12vw,66px)}.craft-editorial .craft-copy p{max-width:300px;margin:18px 0 10px}.craft-editorial .craft-visual{inset:0;width:100%;height:100%}.craft-editorial .craft-visual .asset img{object-position:52% 18%!important}}
 @media(prefers-reduced-motion:reduce){.motion-line-content,.statement-second,.intro-statement-texture,.craft-photograph,.craft-description,.statement-editorial p{transform:none!important}.craft-description,.statement-editorial p{opacity:1!important}.craft-editorial .craft-visual{clip-path:none!important}}
 
 /* Compact vertical rhythm across the homepage's editorial sections. */
