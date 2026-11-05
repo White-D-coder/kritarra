@@ -35,21 +35,21 @@ export function Perspective() {
             <span className="perspective-title-line"><motion.span initial={false} whileInView={reduce ? {} : { y: ['105%', '0%'] }} viewport={{ once: true, amount: .6 }} transition={{ duration: 1.15, ease }}>An art.</motion.span></span>{' '}
             <span className="perspective-title-line"><motion.em initial={false} whileInView={reduce ? {} : { y: ['105%', '0%'] }} viewport={{ once: true, amount: .6 }} transition={{ duration: 1.15, delay: .14, ease }}>An intention.</motion.em></span>
           </h2>
+          <div className="perspective-note">
+            <p>A personal approach to diamonds, gemstones and bespoke jewellery.</p>
+            <Link className="perspective-link" href="/about/">About Kritarra</Link>
+          </div>
         </div>
         <motion.div className="perspective-portrait" style={{ y: reduce ? 0 : portraitY }}>
           <motion.div className="perspective-image-reveal" initial={false} whileInView={reduce ? {} : { clipPath: ['inset(14% 0 0 0)', 'inset(0% 0 0 0)'] }} viewport={{ once: true, amount: .2 }} transition={{ duration: 1.3, ease }}>
-            <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="(max-width: 767px) 82vw, 60vw" />
+            <Asset photo={campaign.DXJI2FVjFC_} position="50% 26%" sizes="(max-width: 767px) 82vw, 48vw" />
           </motion.div>
         </motion.div>
         <motion.div className="perspective-detail" style={{ y: reduce ? 0 : detailY }}>
           <motion.div className="perspective-image-reveal" initial={false} whileInView={reduce ? {} : { clipPath: ['inset(0 100% 0 0)', 'inset(0 0% 0 0)'] }} viewport={{ once: true, amount: .2 }} transition={{ duration: 1.2, delay: .16, ease }}>
-            <Asset photo={campaign.DdgV82YseoM} position="45% 25%" sizes="(max-width: 767px) 44vw, 34vw" />
+            <Asset photo={campaign.DdgV82YseoM} position="45% 25%" sizes="(max-width: 767px) 46vw, 35vw" />
           </motion.div>
         </motion.div>
-      </div>
-      <div className="perspective-note">
-        <p>A personal approach to diamonds, gemstones and bespoke jewellery.</p>
-        <Link className="perspective-link" href="/about/">About Kritarra</Link>
       </div>
     </section>
   );

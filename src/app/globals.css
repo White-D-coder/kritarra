@@ -127,28 +127,28 @@ html{scroll-padding-top:70px}
   .kritarra-editorial:not([data-editorial-motion=diagonal]) .kritarra-editorial-track{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* Perspective: overlapping type, a large portrait and an inset jewellery study. */
-.perspective{padding:45px var(--gutter) 65px;background:transparent}
-.perspective-stage{position:relative;aspect-ratio:1.7}
-.perspective-heading{position:absolute;top:2.5%;left:0;z-index:3}
-.perspective-heading .eyebrow{font-size:11px;letter-spacing:1.6px;line-height:1.8;margin-bottom:21px}
-.perspective-heading h2{font-size:clamp(100px,10.8vw,174px);line-height:.87;letter-spacing:-4.5px}
+/* Perspective: a composed two-column story with a layered jewellery study. */
+.perspective{padding:55px var(--gutter) 75px;background:transparent}
+.perspective-stage{position:relative;display:grid;grid-template-columns:.95fr 1.1fr;column-gap:6vw;row-gap:42px;align-items:stretch}
+.perspective-heading{position:relative;grid-column:1;grid-row:1;z-index:3;padding-top:32px;min-width:0}
+.perspective-heading .eyebrow{margin-bottom:25px}
+.perspective-heading h2{font-size:clamp(74px,7.7vw,124px);line-height:1.02;letter-spacing:-.035em}
 .perspective-heading h2 em{display:block;white-space:nowrap;font-weight:400}
 .perspective-title-line{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
 .perspective-title-line>span,.perspective-title-line>em{display:block}
 .perspective-image-reveal{width:100%;height:100%}
 .perspective .asset img{transform:none;transition:none}
-@media(prefers-reduced-motion:reduce){.perspective-portrait,.perspective-detail,.perspective-title-line>span,.perspective-title-line>em{transform:none!important}.perspective-image-reveal{clip-path:none!important}}
-.perspective-portrait{position:absolute;top:0;right:0;width:62%;height:100%;z-index:1}
+.perspective-portrait{position:relative;grid-column:2;grid-row:1 / 3;min-height:clamp(580px,48vw,760px);height:100%;width:100%;z-index:1}
 .perspective-portrait .asset,.perspective-detail .asset{width:100%;height:100%;background:transparent}
-.perspective-detail{position:absolute;left:9%;bottom:0;width:35%;height:46%;z-index:2;border:8px solid var(--ivory)}
-.perspective-note{display:flex;justify-content:space-between;align-items:center;gap:35px;margin-top:22px}
-.perspective-note p{max-width:390px;font-size:12px;line-height:1.85;color:var(--taupe);text-wrap:balance}
-.perspective-link{display:inline-flex;position:relative;flex:none;align-items:center;min-height:44px;padding:7px 0;font-size:11px;letter-spacing:1.2px}
+.perspective-detail{position:relative;grid-column:1;grid-row:2;justify-self:end;align-self:end;width:92%;max-width:470px;aspect-ratio:1.5;margin-right:-9vw;z-index:2;border:6px solid var(--ivory)}
+.perspective-note{display:block;margin-top:27px;max-width:300px}
+.perspective-note p{color:var(--taupe);text-wrap:pretty}
+.perspective-link{display:inline-flex;position:relative;align-items:center;min-height:44px;padding:7px 0;margin-top:14px}
 .perspective-link::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .perspective-link:hover::after,.perspective-link:focus-visible::after{transform:scaleX(1)}
-@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:35px;padding-bottom:50px}.perspective-stage{aspect-ratio:1.5}.perspective-heading h2{font-size:clamp(84px,10.8vw,120px);letter-spacing:-3.4px}.perspective-heading .eyebrow{font-size:11px;letter-spacing:1.2px;margin-bottom:19px}.perspective-portrait{width:64%}.perspective-detail{left:5%;width:38%;height:44%;border-width:6px}.perspective-note{margin-top:18px}.perspective-note p{font-size:11px;max-width:330px}.perspective-link{font-size:11px;letter-spacing:1px}}
-@media(max-width:767px){.perspective{padding:30px var(--gutter) 50px}.perspective-stage{aspect-ratio:.64}.perspective-heading{top:0}.perspective-heading .eyebrow{font-size:11px;letter-spacing:1.2px;margin-bottom:18px}.perspective-heading h2{font-size:clamp(64px,17.6vw,110px);letter-spacing:-2px;line-height:.9}.perspective-portrait{top:32%;width:82%;height:61%}.perspective-detail{left:0;width:44%;height:43%;border-width:5px}.perspective-note{display:block;margin-top:24px}.perspective-note p{font-size:12px;line-height:1.8;max-width:350px}.perspective-link{margin-top:12px;font-size:11px}}
+@media(min-width:768px) and (max-width:1099px){.perspective{padding-top:45px;padding-bottom:60px}.perspective-stage{column-gap:5vw;row-gap:34px}.perspective-heading{padding-top:20px}.perspective-heading h2{font-size:clamp(52px,7.6vw,84px)}.perspective-heading .eyebrow{margin-bottom:22px}.perspective-note{margin-top:24px;max-width:280px}.perspective-portrait{min-height:560px}.perspective-detail{width:96%;margin-right:-8vw;aspect-ratio:1.25}}
+@media(max-width:767px){.perspective{padding:35px var(--gutter) 75px}.perspective-stage{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:0;row-gap:30px}.perspective-heading{grid-column:1 / -1;grid-row:1;padding-top:0}.perspective-heading .eyebrow{margin-bottom:20px}.perspective-heading h2{font-size:clamp(52px,14.2vw,94px);line-height:1.02;letter-spacing:-.025em}.perspective-note{margin-top:20px;max-width:340px}.perspective-link{margin-top:10px}.perspective-portrait{grid-column:1 / -1;grid-row:2;justify-self:end;width:82%;height:auto;min-height:0;aspect-ratio:.78}.perspective-detail{grid-column:1 / -1;grid-row:2;justify-self:start;width:46%;max-width:none;aspect-ratio:.92;margin:0 0 -25px;border-width:5px}}
+@media(prefers-reduced-motion:reduce){.perspective-portrait,.perspective-detail,.perspective-title-line>span,.perspective-title-line>em{transform:none!important}.perspective-image-reveal{clip-path:none!important}}
 
 /* Four photographic doorways into the collection, all visible together. */
 .discovery{padding:45px 0 65px}
@@ -332,7 +332,7 @@ p{letter-spacing:.008em}
 .curated-selection .product-meta{flex-wrap:wrap;row-gap:4px}
 .curated-selection .product-price{font-size:11px}
 .editorial-nav>a{line-height:1.3}
-@media(max-width:767px){.perspective-heading h2{font-size:clamp(52px,14.2vw,94px);line-height:1.05;letter-spacing:-.025em}.intro-statement h2{font-size:clamp(30px,8.5vw,44px);letter-spacing:-.025em}.perspective-heading .eyebrow{letter-spacing:.13em}.curated-selection .product-meta h3{font-size:29px}.newsletter-invitation h2>span{white-space:normal}}
+@media(max-width:767px){.intro-statement h2{font-size:clamp(30px,8.5vw,44px);letter-spacing:-.025em}.curated-selection .product-meta h3{font-size:29px}.newsletter-invitation h2>span{white-space:normal}}
 
 /* Quiet, readable supporting type instead of widely spaced micro labels. */
 :root body :is(.eyebrow,.tiny,.text-link,.perspective-link,.journal-collection-link,.curated-all-link,.discovery-card-action,.craft-note,.kritarra-editorial-label,.footer-instagram){font-size:12px;font-weight:400;letter-spacing:.02em;line-height:1.65;text-transform:none}
