@@ -8,10 +8,10 @@ export function CuratedSelection() {
     <section className="curated-selection" id="curated-selection" aria-labelledby="curated-heading">
       <Reveal className="curated-selection-heading">
         <div>
-          <span className="eyebrow">THE CONSIDERED SELECTION</span>
+          <span className="eyebrow">The considered selection</span>
           <h2 id="curated-heading">Yours to <em>discover.</em></h2>
         </div>
-        <Link className="curated-all-link" href="/collections/">VIEW ALL CREATIONS</Link>
+        <Link className="curated-all-link" href="/collections/">View all creations</Link>
       </Reveal>
 
       <div className="selection-grid" role="group" aria-label="Selected jewellery categories">
@@ -24,7 +24,7 @@ export function CuratedSelection() {
 
       <div className="selection-footnote">
         <p>Category previews · Individual creations and prices on request.</p>
-        <span>SCROLL TO EXPLORE</span>
+        <span>Scroll to explore</span>
       </div>
     </section>
   );

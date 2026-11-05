@@ -15,7 +15,7 @@ export function Perspective() {
     <section className="perspective" id="our-craft" aria-labelledby="perspective-heading">
       <div className="perspective-stage">
         <div className="perspective-heading">
-          <span className="eyebrow">THE KRITARRA PERSPECTIVE</span>
+          <span className="eyebrow">The Kritarra perspective</span>
           <h2 id="perspective-heading">An art. <em>An intention.</em></h2>
         </div>
         <Reveal className="perspective-portrait">
@@ -26,8 +26,8 @@ export function Perspective() {
         </Reveal>
       </div>
       <div className="perspective-note">
-        <p>Jewellery that begins with a feeling, and becomes a part of your story.</p>
-        <Link className="perspective-link" href="/about/">THE WORLD OF KRITARRA</Link>
+        <p>A personal approach to diamonds, gemstones and bespoke jewellery.</p>
+        <Link className="perspective-link" href="/about/">About Kritarra</Link>
       </div>
     </section>
   );

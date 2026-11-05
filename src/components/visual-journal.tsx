@@ -15,10 +15,10 @@ export function VisualJournal() {
       </Reveal>
 
       <Reveal className="journal-arches-copy" delay={0.1}>
-        <span className="eyebrow">A KRITARRA VISUAL JOURNAL</span>
+        <span className="eyebrow">A Kritarra visual journal</span>
         <h2 id="journal-heading">The personal <em>issue.</em></h2>
-        <p>A closer look at individuality, through the details we choose and the stories we carry.</p>
-        <Link href="/collections/" className="journal-collection-link">EXPLORE THE COLLECTION</Link>
+        <p>Jewellery, seen a little differently.</p>
+        <Link href="/collections/" className="journal-collection-link">Explore the collection</Link>
       </Reveal>
     </section>
   );

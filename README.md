@@ -93,4 +93,6 @@ The footer uses the user-supplied emerald-on-blue-silk post (DOgKA81j9ju) as a r
 
 ## Typography and letter signup
 
-EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 9px, and the email input stays at 16px. The letter invitation uses a two-column editorial layout with a fine outlined action and keyboard-visible hover treatment; its existing submission feedback and privacy navigation are retained.
+EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 11px, and the email input stays at 16px. The letter invitation uses a two-column editorial layout with a fine outlined action and keyboard-visible hover treatment; its existing submission feedback and privacy navigation are retained.
+
+Supporting text uses sentence case, restrained tracking and 12px labels. Short homepage descriptions use 14px text and direct wording. The upright display typography and border-free newsletter section are retained.

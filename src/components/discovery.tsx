@@ -14,10 +14,10 @@ export function Discovery() {
     <section className="discovery" id="discovery" aria-labelledby="discovery-heading">
       <Reveal className="discovery-heading">
         <div>
-          <span className="eyebrow">FIND WHAT SPEAKS TO YOU</span>
+          <span className="eyebrow">Find what speaks to you</span>
           <h2 id="discovery-heading">The art of <em>discovery.</em></h2>
         </div>
-        <p>Different expressions.<br />An unmistakably personal choice.</p>
+        <p>Rings, necklaces, earrings and bracelets.<br />Find a piece to make your own.</p>
       </Reveal>
 
       <nav className="discovery-grid" aria-label="Discover jewellery categories">
@@ -31,7 +31,7 @@ export function Discovery() {
               <Asset photo={category.photo} position={category.position} sizes="(max-width: 767px) 50vw, 25vw" />
               <div className="discovery-card-caption">
                 <h3>{category.name}</h3>
-                <span className="discovery-card-action" aria-hidden="true">EXPLORE THE COLLECTION</span>
+                <span className="discovery-card-action" aria-hidden="true">Explore the collection</span>
               </div>
             </Link>
           </Reveal>

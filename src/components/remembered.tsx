@@ -74,9 +74,9 @@ export function Remembered() {
         />
       </div>
       <div className="philosophy-film-copy">
-        <span className="eyebrow">BEYOND ADORNMENT</span>
+        <span className="eyebrow">Beyond adornment</span>
         <h2 id="remembered-heading">Designed to be<br /><em>remembered.</em></h2>
-        <p>For the moments, memories and individuality we carry.</p>
+        <p>Emeralds, diamonds and a lasting impression.</p>
         <span className="philosophy-signature">Kritarra</span>
       </div>
       {allowMotion && loadVideo && !failed && (

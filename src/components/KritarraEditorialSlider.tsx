@@ -18,7 +18,7 @@ export function KritarraEditorialSlider({
   id = 'signature',
   heading = 'The signature',
   headingEmphasis = 'edit.',
-  eyebrow = 'CONSIDERED. COLLECTED. CHERISHED.',
+  eyebrow = 'Selected pieces',
   collectionHref = '/collections/',
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -100,7 +100,7 @@ export function KritarraEditorialSlider({
           <span className="eyebrow">{eyebrow}</span>
           <h2 id={`${id}-heading`}>{heading} <em>{headingEmphasis}</em></h2>
         </div>
-        <TextLink href={collectionHref}>EXPLORE THE COLLECTION</TextLink>
+        <TextLink href={collectionHref}>Explore the collection</TextLink>
       </div>
 
       <div ref={windowRef} className="kritarra-editorial-window">
