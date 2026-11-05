@@ -1,0 +1,26 @@
+[
+  {
+    "family": "EB Garamond",
+    "style": "italic",
+    "weight": "400 500",
+    "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2",
+    "output": "/fonts/eb-garamond-italic-latin.woff2",
+    "sha256": "d2761541b314509e02df3539cd35fc712954a48a50f4e0ab424dde817c699c2a"
+  },
+  {
+    "family": "EB Garamond",
+    "style": "normal",
+    "weight": "400 500",
+    "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2",
+    "output": "/fonts/eb-garamond-latin.woff2",
+    "sha256": "68fd4b247dde89984ee835d99953d235e4927be2b1b732ad81173b519869cee8"
+  },
+  {
+    "family": "Manrope",
+    "style": "normal",
+    "weight": "400 600",
+    "source": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+    "output": "/fonts/manrope-latin.woff2",
+    "sha256": "8bd97e6bbbc1f602a8f791530eed1064c9a357d5731bbc76e3fc587fb068728f"
+  }
+]

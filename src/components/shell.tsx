@@ -60,13 +60,15 @@ export function Newsletter() {
     <h2 id="newsletter-heading"><span>An invitation</span> <span>to <em>discover.</em></span></h2>
     <p>New creations, collections and stories from the world of Kritarra.</p>
    </div>
-   <form onSubmit={submit} aria-busy={busy}>
-    <label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label>
-    <div className="email-field">
-     <input id="newsletter-email" type="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Your email, please" required autoComplete="email" maxLength={254} aria-describedby="newsletter-privacy newsletter-status" />
-     <button type="submit" disabled={busy} aria-label="Subscribe to the Kritarra letter">{busy?'SENDING…':'JOIN THE LETTER'}</button>
+   <form className="letter-form" onSubmit={submit} aria-busy={busy}>
+    <div className="letter-field">
+     <label htmlFor="newsletter-email">YOUR EMAIL ADDRESS</label>
+     <input id="newsletter-email" type="email" value={email} onChange={event=>setEmail(event.target.value)} placeholder="Enter your email address" required autoComplete="email" maxLength={254} aria-describedby="newsletter-privacy newsletter-status" />
     </div>
-    <p className="privacy-copy" id="newsletter-privacy">By subscribing, you agree to receive emails from Kritarra. Read our <Link href="/policies/privacy/">privacy information</Link>. You may unsubscribe at any time.</p>
+    <div className="letter-action-row">
+     <button className="letter-submit" type="submit" disabled={busy} aria-label="Subscribe to the Kritarra letter"><span>{busy?'Sending…':'Join the letter'}</span></button>
+     <p className="privacy-copy" id="newsletter-privacy">By subscribing, you agree to receive emails from Kritarra. Read our <Link href="/policies/privacy/">privacy information</Link>. You may unsubscribe at any time.</p>
+    </div>
     <p className="form-status" id="newsletter-status" role="status">{status}</p>
    </form>
   </section>

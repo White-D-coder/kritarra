@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { StoreProvider } from '@/components/store';
 import { Header, Footer, Overlays } from '@/components/shell';
+import './fonts.css';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="en"><head><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/></head><body><StoreProvider><a href="#main" className="skip-link">Skip to content</a><Header/>{children}<Footer/><Overlays/></StoreProvider></body></html>;
+  return <html lang="en"><head><link rel="preload" href="/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/><link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/></head><body><StoreProvider><a href="#main" className="skip-link">Skip to content</a><Header/>{children}<Footer/><Overlays/></StoreProvider></body></html>;
 }
