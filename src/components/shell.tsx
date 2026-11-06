@@ -56,12 +56,7 @@ export function Newsletter() {
   }
  }
  return (
-  <section className="newsletter newsletter-invitation" id="newsletter" aria-labelledby="newsletter-heading" data-section-motion={reduce?'static':'entrance'}>
-   <div className="newsletter-intro">
-    <span className="eyebrow">The Kritarra letter</span>
-    <h2 id="newsletter-heading"><LineReveal reduce={reduce}>An invitation</LineReveal> <LineReveal reduce={reduce} delay={.12}>to <em>discover.</em></LineReveal></h2>
-    <p>New pieces and occasional notes from Kritarra.</p>
-   </div>
+  <section className="newsletter newsletter-invitation" id="newsletter" aria-label="The Kritarra letter" data-section-motion={reduce?'static':'entrance'}>
    <motion.form className="letter-form" onSubmit={submit} aria-busy={busy} initial={false} whileInView={reduce?{}:{opacity:[0,1],y:[18,0]}} viewport={{once:true,amount:.3}} transition={{duration:.9,delay:.18,ease:sectionEase}}>
     <div className="letter-entry">
     <div className="letter-field">
@@ -78,7 +73,26 @@ export function Newsletter() {
   </section>
  );
 }
-export function Footer(){const photo=campaign.DOgKA81j9ju;return <footer className="site-footer footer-campaign" id="footer"><div className="footer-campaign-media" aria-hidden="true"><img src={photo.src} srcSet={photo.srcSet} sizes="100vw" width={photo.width} height={photo.height} alt="" loading="lazy" decoding="async"/></div><div className="footer-top"><div className="footer-brand"><Link href="/" className="footer-wordmark">KRITARRA</Link><p>Bespoke diamonds.<br/>Rare gemstones.</p><a href={instagram} target="_blank" rel="noreferrer" className="footer-instagram">Instagram <ArrowUpRight size={12}/></a></div><div><h3>Explore</h3><Link href="/collections/">All creations</Link>{categories.map(c=><Link key={c} href={`/collections/${c.toLowerCase()}/`}>{c}</Link>)}</div><div><h3>Kritarra</h3><Link href="/about/">About Kritarra</Link><Link href="/#our-craft">Our perspective</Link><Link href="/#journal">The journal</Link><Link href="/contact/">Private appointments</Link></div><div><h3>Contact</h3><Link href="/contact/">Contact us</Link><Link href="/policies/care/">Jewellery care</Link><Link href="/policies/shipping/">Shipping & returns</Link><a href={`mailto:${contactEmail}`}>{contactEmail}</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Kritarra. All rights reserved.</span><span className="preview-label">Design preview · Catalogue to follow</span><div><Link href="/policies/privacy/">Privacy</Link><Link href="/policies/terms/">Terms</Link><span>India · INR ₹</span></div></div></footer>;}
+export function Footer() {
+ const photo=campaign.DOgKA81j9ju;
+ return <footer className="site-footer footer-campaign" id="footer">
+  <div className="footer-campaign-media" aria-hidden="true"><img src={photo.src} srcSet={photo.srcSet} sizes="100vw" width={photo.width} height={photo.height} alt="" loading="lazy" decoding="async"/></div>
+  <div className="footer-intro">
+   <div className="footer-brand">
+    <Link href="/" className="footer-wordmark">KRITARRA</Link>
+    <p>Bespoke diamonds.<br/>Rare gemstones.</p>
+    <a href={instagram} target="_blank" rel="noreferrer" className="footer-instagram">Instagram <ArrowUpRight size={12}/></a>
+   </div>
+   <Newsletter/>
+  </div>
+  <div className="footer-top">
+   <div><h3>Explore</h3><Link href="/collections/">All creations</Link>{categories.map(c=><Link key={c} href={`/collections/${c.toLowerCase()}/`}>{c}</Link>)}</div>
+   <div><h3>Kritarra</h3><Link href="/about/">About Kritarra</Link><Link href="/#our-craft">Our perspective</Link><Link href="/#journal">The journal</Link><Link href="/contact/">Private appointments</Link></div>
+   <div><h3>Contact</h3><Link href="/contact/">Contact us</Link><Link href="/policies/care/">Jewellery care</Link><Link href="/policies/shipping/">Shipping & returns</Link><a href={`mailto:${contactEmail}`}>{contactEmail}</a></div>
+  </div>
+  <div className="footer-bottom"><span>© {new Date().getFullYear()} Kritarra. All rights reserved.</span><span className="preview-label">Design preview · Catalogue to follow</span><div><Link href="/policies/privacy/">Privacy</Link><Link href="/policies/terms/">Terms</Link><span>India · INR ₹</span></div></div>
+ </footer>;
+}
 
 export function Overlays(){const {panel,setPanel,wishlist,bag,updateQuantity}=useStore();const [query,setQuery]=useState('');const path=usePathname();const ref=useRef<HTMLDivElement>(null);const reduce=useReducedMotion();useEffect(()=>{setPanel(null);},[path,setPanel]); // setPanel is the stable state setter
  useEffect(()=>{if(!panel)return;const previous=document.activeElement as HTMLElement;const original=document.body.style.overflow;document.body.style.overflow='hidden';const main=document.querySelector('main');const footer=document.querySelector('footer');const header=document.querySelector('header');[main,footer,header].forEach(el=>el?.setAttribute('inert',''));const timer=setTimeout(()=>ref.current?.querySelector<HTMLElement>('input,button,a')?.focus(),100);const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setPanel(null);if(e.key==='Tab'){const els=ref.current?.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input,select,[tabindex="0"]');if(!els?.length)return;const first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}};document.addEventListener('keydown',key);return()=>{clearTimeout(timer);document.body.style.overflow=original;[main,footer,header].forEach(el=>el?.removeAttribute('inert'));document.removeEventListener('keydown',key);previous?.focus();};},[panel,setPanel]);

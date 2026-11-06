@@ -83,17 +83,17 @@ The “Designed to be remembered” statement uses locally hosted Full HD emeral
 
 ## The Kritarra letter
 
-The invitation uses a centered headline with sequential line reveals and a single-row email field and underlined action. The form enters once and remains still while in use; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
+The complete email signup sits centered inside the shared footer, with the Kritarra wordmark, tagline and Instagram link in the space to its left. On smaller screens the brand stacks above the signup. The navigation columns sit below this row. It uses a single-row email field and underlined action in white over the footer background. The form enters once and remains still while in use; privacy information and live form feedback remain available. The existing newsletter integration behaviour is retained: without an endpoint, the form explicitly says the email was not submitted, rather than implying a successful subscription.
 
 
 ## Footer campaign background
 
-The footer uses the user-supplied emerald-on-blue-silk post (DOgKA81j9ju) as a responsive, decorative image at exactly 50% opacity. A separate 20% black overlay and white text maintain contrast without reducing content opacity. Footer links, hover/focus states and legal text remain readable; source and checksum are recorded in assets/campaign/sources.json.
+The footer uses the user-supplied emerald-on-blue-silk post (DOgKA81j9ju) as a responsive, decorative image at exactly 50% opacity. The image is positioned in the right half on desktop and blended into the dark blue background; mobile uses a right-shifted crop. A separate 20% black overlay and white text maintain contrast without reducing content opacity. Footer links, hover/focus states and legal text remain readable; source and checksum are recorded in assets/campaign/sources.json.
 
 
 ## Typography and letter signup
 
-EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 11px, and the email input stays at 16px. The letter invitation uses a centered editorial layout with an underlined action and visible keyboard focus; its existing submission feedback and privacy navigation are retained.
+EB Garamond supplies upright display typography, including emphasized phrases; Manrope supplies reading copy, labels and controls across every route. Latin WOFF2 files are served locally with bundled OFL licences, font-display swap and preloaded roman/UI faces. Sources and checksums live in assets/fonts/sources.json. Small labels are at least 11px, and the email input stays at 16px. The letter signup sits inside the footer with an underlined action and visible white keyboard focus; its existing submission feedback and privacy navigation are retained.
 
 Supporting text uses sentence case, restrained tracking and 12px labels. Short homepage descriptions use 14px text and direct wording. The upright display typography and border-free newsletter section are retained.
 
