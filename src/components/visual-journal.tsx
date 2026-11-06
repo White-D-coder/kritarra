@@ -17,7 +17,7 @@ export function VisualJournal() {
       <Reveal className="journal-arches-copy" delay={0.1}>
         <span className="eyebrow">A Kritarra visual journal</span>
         <h2 id="journal-heading">The personal <em>issue.</em></h2>
-        <p>Jewellery, seen a little differently.</p>
+        <p>Jewellery, seen a little differently, where timeless craftsmanship meets modern elegance and everyday expression.</p>
         <Link href="/collections/" className="journal-collection-link">Explore the collection</Link>
       </Reveal>
     </section>
