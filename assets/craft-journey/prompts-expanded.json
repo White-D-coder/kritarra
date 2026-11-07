@@ -1,0 +1,55 @@
+{
+  "tool": "built-in image_gen",
+  "created": "2026-11-07",
+  "purpose": "Additional illustrative stages for the eight-chapter jewellery-making journey. Original generic process imagery, not documentary photographs of Kritarra's workshop.",
+  "images": [
+    {
+      "id": "design",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: a designer and client seated across a walnut jewellery-design desk, shown only from shoulders to hands, no identifiable faces. Two natural hands discuss a large ivory sketchbook with an emerald-ring drawing, an open small black jewellery box and loose stones on a cream tray. A pencil points to a ring design. Personal, thoughtful consultation, candid luxury editorial composition.",
+      "outputs": [
+        "public/images/craft-journey/design-720.webp",
+        "public/images/craft-journey/design-1440.webp"
+      ]
+    },
+    {
+      "id": "materials",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: close-up of a gem specialist's natural fingertips holding fine steel gem tweezers with a single rectangular emerald-cut green gemstone lifted above a warm ivory gem tray. A few tiny round white diamonds and a small yellow-gold sample rest on the tray. Emerald facets illuminated by warm side light, expert inspection, background bench softly out of focus. The emerald is the clear focal point.",
+      "outputs": [
+        "public/images/craft-journey/materials-720.webp",
+        "public/images/craft-journey/materials-1440.webp"
+      ]
+    },
+    {
+      "id": "mould",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: a jeweller's natural hands carefully using a small precision carving tool on a blue wax ring model secured on a wood bench pin. The wax ring model has a rectangular four-prong-style central setting for the eventual emerald. Wax curls and a small brass caliper sit nearby. Crisp macro view of shaping the wax model, no gemstone yet, the actual blue wax model and tool tip in sharp focus. Warm understated jewellery craft photography.",
+      "outputs": [
+        "public/images/craft-journey/mould-720.webp",
+        "public/images/craft-journey/mould-1440.webp"
+      ]
+    },
+    {
+      "id": "cast",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: close macro photograph of a freshly cast yellow-gold ring mounting still attached to a short rough casting sprue, held by steel tongs above a pale plaster casting mould on a heat-darkened jeweller's bench. The gold ring has an empty rectangular four-prong setting and no gemstones yet. Realistic matte unpolished cast metal texture and small casting imperfections, warm amber light. Show casting result, not a finished catalogue jewel.",
+      "outputs": [
+        "public/images/craft-journey/cast-720.webp",
+        "public/images/craft-journey/cast-1440.webp"
+      ]
+    },
+    {
+      "id": "weld",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: close macro side view of a jeweller joining a small yellow-gold setting to a ring shank using a fine jeweller's soldering torch with a tiny controlled blue flame, on a heat-darkened firebrick. One natural hand holds steel tweezers securing the unmounted gold ring. No gemstone yet. Proper compact bench composition, jewellery-scale flame, warm orange reflected light, realistic intimate metalwork moment.",
+      "outputs": [
+        "public/images/craft-journey/weld-720.webp",
+        "public/images/craft-journey/weld-1440.webp"
+      ]
+    },
+    {
+      "id": "polish-wheel",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 cinematic editorial workshop photograph, matching a luxury jewellery-making story. Warm amber side light, deep espresso shadows, aged walnut and brass tools, tactile realistic materials and natural skin, restrained highlights, no glossy AI look. Jewellery throughout is a simple yellow-gold ring with a rectangular emerald-cut green central stone and tiny round white diamond shoulder accents. Scene centers within the middle 70% for responsive crops. No writing, branding, logos, watermark, borders or collages. Scene: macro photograph of a jeweller applying the underside of a completed yellow-gold ring gently to a soft cream cotton polishing wheel mounted on a small professional bench polishing motor. Only the metal shank touches the wheel; the rectangular emerald and tiny diamond shoulders stay visibly clear of the wheel. Natural fingertips grip the ring, wheel softly motion blurred with realistic radial texture, jewel and hand sharp, warm amber workshop light. The final finishing stage, tactile documentary style.",
+      "outputs": [
+        "public/images/craft-journey/polish-wheel-720.webp",
+        "public/images/craft-journey/polish-wheel-1440.webp"
+      ]
+    }
+  ]
+}

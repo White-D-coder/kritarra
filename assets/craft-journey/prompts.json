@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "created": "2026-11-07",
+  "purpose": "Illustrative jewellery-making journey; not documentation of Kritarra's manufacturing process or catalogue products.",
+  "images": [
+    {
+      "id": "sketch",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 editorial photograph for a luxury jewellery craft story. Photographic realism, understated luxury, warm amber side light, deep espresso shadows, aged walnut bench, authentic natural surface texture, no glossy AI look. Consistent jewellery design: a single rectangular emerald-cut green gemstone in a simple yellow-gold four-prong ring, tiny round white diamond accents at the shoulders. Close-up composition, subject fully inside the central 70% of frame for responsive cropping. No text, letters, logos, watermark, borders or collage. Scene: overhead three-quarter close-up of a jeweller's hand holding a sharpened graphite pencil, drawing a precise ring design on warm ivory sketch paper. The page shows an elegant accurate pencil rendering of the specified emerald ring, with light green watercolour in the central stone. The hand is naturally posed and anatomically correct. Loose emerald gemstone, two small white stones and a brass ruler rest beside the paper. Focus on the sketch and pencil tip. A real intimate designer's desk, not a digital render.",
+      "outputs": [
+        "public/images/craft-journey/sketch-720.webp",
+        "public/images/craft-journey/sketch-1440.webp"
+      ]
+    },
+    {
+      "id": "setting",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 editorial photograph for a luxury jewellery craft story. Photographic realism, understated luxury, warm amber side light, deep espresso shadows, aged walnut bench, authentic natural surface texture, no glossy AI look. Consistent jewellery design: a single rectangular emerald-cut green gemstone in a simple yellow-gold four-prong ring, tiny round white diamond accents at the shoulders. Close-up composition, subject fully inside the central 70% of frame for responsive cropping. No text, letters, logos, watermark, borders or collage. Scene: intimate macro photograph of an experienced jeweller's hands at a wooden bench pin using fine steel tweezers to carefully lower a rectangular emerald-cut green gemstone into the specified yellow-gold four-prong ring mounting. A small gold ring clamp holds the ring securely. Focus on the hands, tweezers, stone and delicate setting. Real metal tools and minute material imperfections, warm side lighting, dark out-of-focus workshop behind. Show a technically plausible handcraft moment with natural anatomy.",
+      "outputs": [
+        "public/images/craft-journey/setting-720.webp",
+        "public/images/craft-journey/setting-1440.webp"
+      ]
+    },
+    {
+      "id": "polish",
+      "prompt": "Use case: photorealistic-natural. Asset: landscape 3:2 editorial photograph for a luxury jewellery craft story. Photographic realism, understated luxury, warm amber side light, deep espresso shadows, aged walnut bench, authentic natural surface texture, no glossy AI look. Consistent jewellery design: a single rectangular emerald-cut green gemstone in a simple yellow-gold four-prong ring, tiny round white diamond accents at the shoulders. Close-up composition, subject fully inside the central 70% of frame for responsive cropping. No text, letters, logos, watermark, borders or collage. Scene: intimate macro photograph of an experienced jeweller's hands giving the specified finished yellow-gold emerald ring a final hand polish using a soft cream cotton jeweller's polishing cloth. The ring is held delicately between natural fingertips, emerald and small diamond shoulders visible and sharp. Restrained warm light catches the finished gold surface. The folded cloth crosses the lower foreground, dark warm workbench behind. This is the final finishing moment, tactile authentic photography, not a catalog render.",
+      "outputs": [
+        "public/images/craft-journey/polish-720.webp",
+        "public/images/craft-journey/polish-1440.webp"
+      ]
+    }
+  ]
+}

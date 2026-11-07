@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 import { Discovery } from "@/components/discovery";
 import { VisualJournal } from "@/components/visual-journal";
 import { Remembered } from "@/components/remembered";
+import { CraftJourney } from "@/components/craft-journey";
 import { BrandIntro } from "@/components/brand-intro";
 import { BrandStatement } from "@/components/brand-statement";
 import { CraftStory } from "@/components/craft-story";
@@ -25,6 +26,7 @@ export default function Home() {
       <CraftStory />
       <VisualJournal />
       <Remembered />
+      <CraftJourney />
       <section className="social-section section">
         <Reveal className="section-heading">
           <div>
